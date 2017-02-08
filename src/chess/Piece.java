@@ -12,7 +12,7 @@ public class Piece implements Cloneable {
     public int[] position = new int[2];
 
     public Piece(String name, int[] position) {
-        this.key = name;        //第一个字母是颜色 第二个字母是代号 第三个字母是index
+        this.key = name;
         this.color = name.charAt(0);
         this.character = name.charAt(1);
         this.index = name.charAt(2);

@@ -2,34 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac357e1e-2b0a-452a-883b-e1724c7cc6a1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/ChessGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/Nenual/bp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/alogrithm/AlphaBetaNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/alogrithm/EvalModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/alogrithm/SearchModel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/alogrithm/SearchModel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/alogrithm/SearchModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/chess/Board.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/chess/Piece.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/chess/Rules.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/control/GameController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/view/GameView$BoardClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/view/GameView$PieceOnClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem-master 2/view/GameView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/ChessGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/Nenual/bp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/alogrithm/AlphaBetaNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/alogrithm/EvalModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/alogrithm/SearchModel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/alogrithm/SearchModel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/alogrithm/SearchModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/chess/Board.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/chess/Piece.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/chess/Rules.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/control/GameController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/view/GameView$BoardClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/view/GameView$PieceOnClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/IntelligentChineseChessSystem/view/GameView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/Nenual/bp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/alogrithm.uml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/ab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bj.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/board.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rj.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/BetaChess.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/ChessGame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/ANN.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/AlphaBetaNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvalModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Chromosome.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Population$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Population$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Population.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/SearchModel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/SearchModel$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/SearchModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/neural.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/chess/Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/chess/Piece.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/chess/Rules.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/control/GameController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/alogrithm.uml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/ab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bj.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/board.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rj.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/view/GameView$BoardClickListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/view/GameView$PieceOnClickListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/view/GameView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/alogrithm.uml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/ab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bj.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/board.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rj.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/ChessGame.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/ANN.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/AlphaBetaNode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EProgramming.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvalModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/Chromosome.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/EP.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/Population.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/SearchModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/neural.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/chess/Board.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/chess/Piece.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/chess/Rules.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/control/GameController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/view/GameView.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/ChessGame.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/ChessGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvalModel.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvalModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$1.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$2.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BetaChess.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,12 +136,22 @@
     <favorites_list name="BetaChess" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameView.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6418919">
-              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.035971224">
+              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BetaChess.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BetaChess.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,8 +181,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
-    <option name="y" value="36" />
+    <option name="x" value="33" />
+    <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="772" />
   </component>
@@ -116,7 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -159,18 +253,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="production" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -623,15 +718,17 @@
       <updated>1486381502958</updated>
       <workItem from="1486381505895" duration="176000" />
       <workItem from="1486383758909" duration="102000" />
+      <workItem from="1486538099207" duration="17000" />
+      <workItem from="1486538119854" duration="127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278000" />
+    <option name="totallyTimeSpent" value="422000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="36" width="1400" height="772" extended-state="0" />
-    <editor active="true" />
+    <frame x="33" y="23" width="1400" height="772" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -640,10 +737,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -670,14 +767,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.035971224">
@@ -686,10 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
+    <entry file="file://$PROJECT_DIR$/BetaChess.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6418919">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

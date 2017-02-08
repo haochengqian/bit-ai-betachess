@@ -36,7 +36,7 @@ public class Rules {
         }
     }
 
-    private static ArrayList<int[]> mRules() {  //马
+    private static ArrayList<int[]> mRules() {
         ArrayList<int[]> moves = new ArrayList<int[]>();
         int[][] target = new int[][]{{1, -2}, {2, -1}, {2, 1}, {1, 2}, {-1, 2}, {-2, 1}, {-2, -1}, {-1, -2}};
         int[][] obstacle = new int[][]{{0, -1}, {1, 0}, {1, 0}, {0, 1}, {0, 1}, {-1, 0}, {-1, 0}, {0, -1}};
@@ -52,7 +52,7 @@ public class Rules {
         return moves;
     }
 
-    private static ArrayList<int[]> jRules() {      //车
+    private static ArrayList<int[]> jRules() {
         ArrayList<int[]> moves = new ArrayList<int[]>();
         int[] yOffsets = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
         int[] xOffsets = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -91,7 +91,7 @@ public class Rules {
         return moves;
     }
 
-    private static ArrayList<int[]> pRules() {      //炮
+    private static ArrayList<int[]> pRules() {
         ArrayList<int[]> moves = new ArrayList<int[]>();
         int[] yOffsets = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
         int[] xOffsets = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -149,7 +149,7 @@ public class Rules {
         return moves;
     }
 
-    private static ArrayList<int[]> xRules() {          //像
+    private static ArrayList<int[]> xRules() {
         ArrayList<int[]> moves = new ArrayList<int[]>();
         int[][] target = new int[][]{{-2, -2}, {2, -2}, {-2, 2}, {2, 2}};
         int[][] obstacle = new int[][]{{-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
@@ -165,7 +165,7 @@ public class Rules {
         return moves;
     }
 
-    private static ArrayList<int[]> sRules() {      //士
+    private static ArrayList<int[]> sRules() {
         ArrayList<int[]> moves = new ArrayList<int[]>();
         int[][] target = new int[][]{{-1, -1}, {1, 1}, {-1, 1}, {1, -1}};
         for (int[] aTarget : target) {
@@ -178,7 +178,7 @@ public class Rules {
         return moves;
     }
 
-    private static ArrayList<int[]> bRules() {      //帅
+    private static ArrayList<int[]> bRules() {
         ArrayList<int[]> moves = new ArrayList<int[]>();
         /* 3*3 block */
         int[][] target = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
@@ -204,7 +204,7 @@ public class Rules {
         return moves;
     }
 
-    private static ArrayList<int[]> zRules() {      //卒
+    private static ArrayList<int[]> zRules() {
         ArrayList<int[]> moves = new ArrayList<int[]>();
         int[][] targetU = new int[][]{{0, 1}, {0, -1}, {-1, 0}};
         int[][] targetD = new int[][]{{0, 1}, {0, -1}, {1, 0}};
