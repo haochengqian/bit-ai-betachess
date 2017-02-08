@@ -17,6 +17,7 @@ public class SearchModel {
     private Board board;
     private GameController controller = new GameController();
 
+
     public AlphaBetaNode search(Board board) {
         this.board = board;
         if (board.pieces.size() < 28)
@@ -111,4 +112,5 @@ public class SearchModel {
         }
         return moves;
     }
+
 }

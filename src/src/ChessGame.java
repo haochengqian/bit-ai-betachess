@@ -2,6 +2,7 @@ import chess.Board;
 import control.GameController;
 import view.GameView;
 
+
 /**
  * Created by Tong on 12.08.
  * Main process of Chinese Chess Game.
@@ -21,7 +22,6 @@ public class ChessGame {
     public void init() {
         controller = new GameController();
         board = controller.playChess();
-
         view = new GameView(controller);
         view.init(board);
     }
