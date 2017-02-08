@@ -60,7 +60,7 @@ public class Population {
                     return -1;
                 }
             }
-            
+
         });
     }
      public void sortByWin(){

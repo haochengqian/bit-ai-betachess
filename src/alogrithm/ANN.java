@@ -20,8 +20,8 @@ public class ANN {
     private double[] in_1;   //隐含层输入数组
     private double in_2;     //输出层输入数组
 
-    double[][] w;    //输入->隐含权值矩阵
-    double[] v;     //隐含->输出权值矩阵
+    public double[][] w;    //输入->隐含权值矩阵
+    public double[] v;     //隐含->输出权值矩阵
 
     private Random R = new Random();
 
