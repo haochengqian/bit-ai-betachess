@@ -20,6 +20,7 @@ public class RobotTrain {
     public int simulate() {
         System.out.println("Robot starts to train");
         GameController robotGameController = new GameController();
+
         Board trainBoard = robotGameController.playChess();
 
         char winner = 'x';
@@ -41,7 +42,7 @@ public class RobotTrain {
         if (winner == 'x') {
             times = 0;
         }
-
+        System.out.println(winner);
         return times;
     }
 

@@ -42,7 +42,7 @@ public class SearchModel {
         for (AlphaBetaNode n : moves) {
             /* Move*/
             Piece eaten = board.updatePiece(n.piece, n.to);
-            n.value = alphaBeta(DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE, false, board.player, ann);
+            n.value = alphaBeta(DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE, false, board.player=='b'?'r':'b', ann);
             /* Select a best move during searching to save time*/
             if (best == null || n.value >= best.value)
                 best = n;
@@ -54,7 +54,6 @@ public class SearchModel {
             }
         }
         long finishTime = System.currentTimeMillis();
-//        System.out.println(finishTime - startTime);
         return best;
     }
 

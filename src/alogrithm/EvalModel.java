@@ -26,7 +26,7 @@ public class EvalModel {
 
 
     public int eval(Board board, char player, ANN ann) {
-        if(player == 'b') {
+        if(player == 'r') {
             for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
                 Piece piece = stringPieceEntry.getValue();
             /* The table in PiecePosition is for red player in default. To eval black player, needs to perform a mirror transformation. */
@@ -97,15 +97,6 @@ public class EvalModel {
             double sum_red = ann.evaluate(values[0]);
             double sum_black = ann.evaluate(values[1]);
 
-            //long sum_red = (long)(neu.computeOut(values[0])*1e16);
-            //long sum_black=(long)(neu.computeOut(values[1])*1e16);
-
-//            System.out.println(sum_red - sum_black);
-//            //System.out.println(sum_black);
-//            System.out.println(sumRed - sumBlack);
-//            System.out.println();
-            //System.out.println(sumBlack);
-            //System.out.println("ANN\n");
             switch (player) {
                 case 'r':
                     return (int) (sum_red - sum_black);
@@ -186,7 +177,7 @@ public class EvalModel {
 
     private int evalPieceValue(int p) {
         /* b | s | x | m | j | p | z*/
-        int[] pieceValue = new int[]{1000000, 170, 160, 450, 1000, 450, 60};
+        int[] pieceValue = new int[]{1000000, 110, 110, 300, 600, 300, 70};
         return pieceValue[p];
     }
 
