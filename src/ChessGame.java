@@ -30,6 +30,7 @@ public class ChessGame {
         while (controller.hasWin(board) == 'x') {
             view.showPlayer('r');
             /* User in. */
+//            controller.responseMoveChess(board, view);
             while (board.player == 'r')
                 Thread.sleep(1000);
 

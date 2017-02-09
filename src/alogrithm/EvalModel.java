@@ -25,98 +25,167 @@ public class EvalModel {
 
 
     public int eval(Board board, char player) {
-        for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
-            Piece piece = stringPieceEntry.getValue();
+        if(player == 'b') {
+            for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
+                Piece piece = stringPieceEntry.getValue();
             /* The table in PiecePosition is for red player in default. To eval black player, needs to perform a mirror transformation. */
-            int[] reversePosition = new int[]{board.BOARD_HEIGHT - 1 - piece.position[0], piece.position[1]};
-            switch (piece.character) {
-                /*************************************修改****************************/
+                int[] reversePosition = new int[]{board.BOARD_HEIGHT - 1 - piece.position[0], piece.position[1]};
+                switch (piece.character) {
+                    /*************************************修改****************************/
+                    case 'b':
+                        if (piece.color == 'r') values[0][0] += evalPieceValue(0);
+                        else values[1][0] += evalPieceValue(0);
+                        break;
+                    case 's':
+                        if (piece.color == 'r') values[0][1] += evalPieceValue(1);
+                        else values[1][1] += evalPieceValue(1);
+                        break;
+                    case 'x':
+                        if (piece.color == 'r') values[0][2] += evalPieceValue(2);
+                        else values[1][2] += evalPieceValue(2);
+                        break;
+                    case 'm':
+                        if (piece.color == 'r') {
+                            values[0][3] += evalPieceValue(3);
+                            values[0][4] += evalPiecePosition(3, piece.position);
+                        } else {
+                            values[1][3] += evalPieceValue(3);
+                            values[1][4] += evalPiecePosition(3, reversePosition);
+                        }
+                        break;
+                    case 'j':
+                        if (piece.color == 'r') {
+                            values[0][5] += evalPieceValue(4);
+                            values[0][6] += evalPiecePosition(4, piece.position);
+                        } else {
+                            values[1][5] += evalPieceValue(4);
+                            values[1][6] += evalPiecePosition(4, reversePosition);
+                        }
+                        break;
+                    case 'p':
+                        if (piece.color == 'r') {
+                            values[0][7] += evalPieceValue(5);
+                            values[0][8] += evalPiecePosition(5, piece.position);
+                        } else {
+                            values[1][7] += evalPieceValue(5);
+                            values[1][8] += evalPiecePosition(5, reversePosition);
+                        }
+                        break;
+                    case 'z':
+                        if (piece.color == 'r') {
+                            values[0][9] += evalPieceValue(6);
+                            values[0][10] += evalPiecePosition(6, piece.position);
+                        } else {
+                            values[1][9] += evalPieceValue(6);
+                            values[1][10] += evalPiecePosition(6, reversePosition);
+                        }
+                        break;
+                }
+            }
+
+            //int sumRed = values[0][0] + values[0][1] * 8, sumBlack = values[1][0] + values[1][1] * 8;
+            int sumRed = 0;
+            int sumBlack = 0;
+            for (int i = 0; i < 11; i++) {
+                sumRed += values[0][i];
+                sumBlack += values[1][i];
+            }
+            sumRed += 7 * (values[0][4] + values[0][6] + values[0][8] + values[0][10]);
+            sumBlack += 7 * (values[1][4] + values[1][6] + values[1][8] + values[1][10]);
+
+            double sum_red = ann.evaluate(values[0]);
+            double sum_black = ann.evaluate(values[1]);
+
+            //long sum_red = (long)(neu.computeOut(values[0])*1e16);
+            //long sum_black=(long)(neu.computeOut(values[1])*1e16);
+
+//            System.out.println(sum_red - sum_black);
+//            //System.out.println(sum_black);
+//            System.out.println(sumRed - sumBlack);
+//            System.out.println();
+            //System.out.println(sumBlack);
+            System.out.println("ANN\n");
+            switch (player) {
+                case 'r':
+                    return (int) (sum_red - sum_black);
                 case 'b':
-                    if (piece.color == 'r') values[0][0] += evalPieceValue(0);
-                    else values[1][0] += evalPieceValue(0);
-                    break;
-                case 's':
-                    if (piece.color == 'r') values[0][1] += evalPieceValue(1);
-                    else values[1][1] += evalPieceValue(1);
-                    break;
-                case 'x':
-                    if (piece.color == 'r') values[0][2] += evalPieceValue(2);
-                    else values[1][2] += evalPieceValue(2);
-                    break;
-                case 'm':
-                    if (piece.color == 'r') {
-                        values[0][3] += evalPieceValue(3);
-                        values[0][4] += evalPiecePosition(3, piece.position);
-                    } else {
-                        values[1][3] += evalPieceValue(3);
-                        values[1][4] += evalPiecePosition(3, reversePosition);
-                    }
-                    break;
-                case 'j':
-                    if (piece.color == 'r') {
-                        values[0][5] += evalPieceValue(4);
-                        values[0][6] += evalPiecePosition(4, piece.position);
-                    } else {
-                        values[1][5] += evalPieceValue(4);
-                        values[1][6] += evalPiecePosition(4, reversePosition);
-                    }
-                    break;
-                case 'p':
-                    if (piece.color == 'r') {
-                        values[0][7] += evalPieceValue(5);
-                        values[0][8] += evalPiecePosition(5, piece.position);
-                    } else {
-                        values[1][7] += evalPieceValue(5);
-                        values[1][8] += evalPiecePosition(5, reversePosition);
-                    }
-                    break;
-                case 'z':
-                    if (piece.color == 'r') {
-                        values[0][9] += evalPieceValue(6);
-                        values[0][10] += evalPiecePosition(6, piece.position);
-                    } else {
-                        values[1][9] += evalPieceValue(6);
-                        values[1][10] += evalPiecePosition(6, reversePosition);
-                    }
-                    break;
+                    return (int) (sum_black - sum_red);
+                default:
+                    return -1;
             }
         }
-
-        //int sumRed = values[0][0] + values[0][1] * 8, sumBlack = values[1][0] + values[1][1] * 8;
-        int sumRed = 0;
-        int sumBlack = 0;
-        for(int i = 0; i < 11; i++) {
-            sumRed += values[0][i];
-            sumBlack += values[1][i];
-        }
-        sumRed += 7 * (values[0][4] + values[0][6] + values[0][8] + values[0][10]);
-        sumBlack += 7 * (values[1][4] + values[1][6] + values[1][8] + values[1][10]);
-
-        double sum_red = ann.evaluate(values[0]);
-        double sum_black = ann.evaluate(values[1]);
-
-        //long sum_red = (long)(neu.computeOut(values[0])*1e16);
-        //long sum_black=(long)(neu.computeOut(values[1])*1e16);
-
-        System.out.println(sum_red - sum_black);
-        //System.out.println(sum_black);
-        System.out.println(sumRed - sumBlack);
-        System.out.println();
-        //System.out.println(sumBlack);
-
-        switch (player) {
-            case 'r':
-                return (int)(sum_red - sum_black);
-            case 'b':
-                return (int)(sum_black - sum_red);
-            default:
-                return -1;
+        else {
+            for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
+                Piece piece = stringPieceEntry.getValue();
+            /* The table in PiecePosition is for red player in default. To eval black player, needs to perform a mirror transformation. */
+                int[] reversePosition = new int[]{board.BOARD_HEIGHT - 1 - piece.position[0], piece.position[1]};
+                switch (piece.character) {
+                    case 'b':
+                        if (piece.color == 'r') values[0][0] += evalPieceValue(0);
+                        else values[1][0] += evalPieceValue(0);
+                        break;
+                    case 's':
+                        if (piece.color == 'r') values[0][0] += evalPieceValue(1);
+                        else values[1][0] += evalPieceValue(1);
+                        break;
+                    case 'x':
+                        if (piece.color == 'r') values[0][0] += evalPieceValue(2);
+                        else values[1][0] += evalPieceValue(2);
+                        break;
+                    case 'm':
+                        if (piece.color == 'r') {
+                            values[0][0] += evalPieceValue(3);
+                            values[0][1] += evalPiecePosition(3, piece.position);
+                        } else {
+                            values[1][0] += evalPieceValue(3);
+                            values[1][1] += evalPiecePosition(3, reversePosition);
+                        }
+                        break;
+                    case 'j':
+                        if (piece.color == 'r') {
+                            values[0][0] += evalPieceValue(4);
+                            values[0][1] += evalPiecePosition(4, piece.position);
+                        } else {
+                            values[1][0] += evalPieceValue(4);
+                            values[1][1] += evalPiecePosition(4, reversePosition);
+                        }
+                        break;
+                    case 'p':
+                        if (piece.color == 'r') {
+                            values[0][0] += evalPieceValue(5);
+                            values[0][1] += evalPiecePosition(5, piece.position);
+                        } else {
+                            values[1][0] += evalPieceValue(5);
+                            values[1][1] += evalPiecePosition(5, reversePosition);
+                        }
+                        break;
+                    case 'z':
+                        if (piece.color == 'r') {
+                            values[0][0] += evalPieceValue(6);
+                            values[0][1] += evalPiecePosition(6, piece.position);
+                        } else {
+                            values[1][0] += evalPieceValue(6);
+                            values[1][1] += evalPiecePosition(6, reversePosition);
+                        }
+                        break;
+                }
+            }
+            int sumRed = values[0][0] + values[0][1] * 8, sumBlack = values[1][0] + values[1][1] * 8;
+            System.out.println("a-b\n");
+            switch (player) {
+                case 'r':
+                    return sumRed - sumBlack;
+                case 'b':
+                    return sumBlack - sumRed;
+                default:
+                    return -1;
+            }
         }
     }
 
     private int evalPieceValue(int p) {
         /* b | s | x | m | j | p | z*/
-        int[] pieceValue = new int[]{1000000, 110, 110, 300, 600, 300, 70};
+        int[] pieceValue = new int[]{1000000, 170, 160, 450, 1000, 450, 60};
         return pieceValue[p];
     }
 
@@ -173,6 +242,10 @@ public class EvalModel {
         if (p == 4) return jPosition[pos[0]][pos[1]];
         if (p == 5) return pPosition[pos[0]][pos[1]];
         if (p == 6) return zPosition[pos[0]][pos[1]];
+        if (p == -3) return mPosition[9 - pos[0]][8 - pos[1]];
+        if (p == -4) return jPosition[9 - pos[0]][8 - pos[1]];
+        if (p == -5) return pPosition[9 - pos[0]][8 - pos[1]];
+        if (p == -6) return zPosition[9 - pos[0]][8 - pos[1]];
         return -1;
     }
 

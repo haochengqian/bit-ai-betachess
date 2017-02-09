@@ -30,11 +30,19 @@ public class SearchModel {
             DEPTH = 6;
         long startTime = System.currentTimeMillis();
         AlphaBetaNode best = null;
-        ArrayList<AlphaBetaNode> moves = generateMovesForAll(true);
+        ArrayList<AlphaBetaNode> moves;
+
+        if(board.player == 'b') {
+            moves = generateMovesForAll(true);
+        }
+        else{
+            moves = generateMovesForAll(false);
+        }
+
         for (AlphaBetaNode n : moves) {
             /* Move*/
             Piece eaten = board.updatePiece(n.piece, n.to);
-            n.value = alphaBeta(DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
+            n.value = alphaBeta(DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE, false,board.player);
             /* Select a best move during searching to save time*/
             if (best == null || n.value >= best.value)
                 best = n;
@@ -46,15 +54,15 @@ public class SearchModel {
             }
         }
         long finishTime = System.currentTimeMillis();
-        System.out.println(finishTime - startTime);
+//        System.out.println(finishTime - startTime);
         return best;
     }
 
 
-    private int alphaBeta(int depth, int alpha, int beta, boolean isMax) {
+    private int alphaBeta(int depth, int alpha, int beta, boolean isMax,char player) {
         /* Return evaluation if reaching leaf node or any side won.*/
         if (depth == 0 || controller.hasWin(board) != 'x')
-            return new EvalModel().eval(board, 'b');
+            return new EvalModel().eval(board, player);
         ArrayList<AlphaBetaNode> moves = generateMovesForAll(isMax);
 
         synchronized (this) {
@@ -71,7 +79,7 @@ public class SearchModel {
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
-                                temp[0] = Math.max(finalAlpha, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, false));
+                                temp[0] = Math.max(finalAlpha, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, false,player=='b'?'r':'b'));
                             }
                         }).run();
                         alpha = temp[0];
@@ -79,15 +87,15 @@ public class SearchModel {
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
-                                temp[0] = Math.min(finalBeta, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, true));
+                                temp[0] = Math.min(finalBeta, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, true,player=='b'?'r':'b'));
                             }
                         }).run();
                         beta = temp[0];
                     }
                 }
                 else {
-                    if (isMax) alpha = Math.max(alpha, alphaBeta(depth - 1, alpha, beta, false));
-                    else beta = Math.min(beta, alphaBeta(depth - 1, alpha, beta, true));
+                    if (isMax) alpha = Math.max(alpha, alphaBeta(depth - 1, alpha, beta, false,player=='b'?'r':'b'));
+                    else beta = Math.min(beta, alphaBeta(depth - 1, alpha, beta, true,player=='b'?'r':'b'));
                 }
                 board.updatePiece(n.piece, n.from);
                 if (eaten != null) {
@@ -112,5 +120,4 @@ public class SearchModel {
         }
         return moves;
     }
-
 }

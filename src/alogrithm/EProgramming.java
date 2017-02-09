@@ -2,27 +2,11 @@
 //
 //import java.util.Collections;
 //import java.util.Random;
-//import java.util.concurrent.Callable;
-//import java.util.concurrent.FutureTask;
 //
 ///**
 // * Created by Chris on 2017/2/8.
 // */
 //public class EProgramming {
-//
-//    class Task implements Callable<Integer> {
-//        @Override
-//        public Integer call() throws Exception {
-//            System. out.println("子线程在进行计算" );
-//            Thread. sleep(3000);
-//            int sum = 0;
-//            for (int i = 0; i < 100; i++)
-//                sum += i;
-//            return sum;
-//        }
-//    }
-//
-//
 //    private class Group implements Comparable<Group>
 //    {
 //        public ANN ann = null;
@@ -138,12 +122,6 @@
 //    private int completecount = 0;
 //    private object locker = new object();
 //
-//
-//    private FutureTask<Int> EvaluateSingleAsync(Group item)
-//    {
-//        return FutureTask.class.
-//    }
-//
 //    private Task<int> EvaluateSingleAsync(Group item)
 //    {
 //        return Task.Factory.StartNew((arg) =>
@@ -215,4 +193,3 @@
 //        return task.Result;
 //    }
 //}
-//

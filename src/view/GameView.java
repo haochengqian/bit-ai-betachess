@@ -4,12 +4,10 @@ import chess.Board;
 import chess.Piece;
 import chess.Rules;
 import control.GameController;
+import control.RobotTrain;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,6 +23,7 @@ public class GameView {
     private static final int SX_OFFSET = 50, SY_OFFSET = 15;
     private Map<String, JLabel> pieceObjects = new HashMap<String, JLabel>();
     private Board board;
+    private Board trainBoard;
     private String selectedPieceKey;
     private String pieceFrameKey;
     private JFrame frame;
@@ -60,16 +59,13 @@ public class GameView {
         lblPlayer.setSize(PIECE_WIDTH, PIECE_HEIGHT);
         pane.add(lblPlayer, 0);
 
+        //*************训练ai按钮
         lblButton = new JButton("训练ai.");
         lblButton.setLocation(10,150);
         lblButton.setSize(PIECE_WIDTH-10,PIECE_HEIGHT-20);
-        //lblButton.addActionListener(new ButtonClickListener(){
-        //    public void clickAction(ActionEvent evt){
-
-        //    }
-        //});
+        lblButton.addActionListener(new ButtonClickListener());
         pane.add(lblButton,0);
-
+        //*************end
         /* Initialize chess pieces and listeners on each piece.*/
         Map<String, Piece> pieces = board.pieces;
         for (Map.Entry<String, Piece> stringPieceEntry : pieces.entrySet()) {
@@ -213,4 +209,16 @@ public class GameView {
         }
     }
 
+    class ButtonClickListener implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            for(int i=1;i<=1;i++){
+                GameController tempGameController = new GameController();
+                trainBoard = tempGameController.playChess();
+                RobotTrain robottrain = new RobotTrain();
+                while(true) {
+                    robottrain.RobotMoveChess(trainBoard);
+                }
+            }
+        }
+    }
 }
