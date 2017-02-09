@@ -19,7 +19,7 @@ public class EP {
         Random r = new Random();
         double a = r.nextGaussian();
         double[] newMutationStep = new double[2];
-        Chromosome newChromosome = new Chromosome(new ANN());
+        Chromosome newChromosome = new Chromosome();
         for (int i = 0; i < chromosome.ann.InNum; i++) {
             for (int j = 0; j < chromosome.ann.HideNum; j++) {
                 newChromosome.ann.w[i][j] = chromosome.ann.w[i][j] * (1 + (alpha * r.nextGaussian()));
@@ -28,6 +28,7 @@ public class EP {
         for (int i = 0; i < chromosome.ann.HideNum; i++) {
             newChromosome.ann.v[i] = chromosome.ann.v[i] * (1 + (alpha * r.nextGaussian()));
         }
+        newChromosome.setFitness();
         return newChromosome;
     }
 

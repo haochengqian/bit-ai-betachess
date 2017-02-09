@@ -14,13 +14,18 @@ public class Chromosome {
     private double fitness;
     private int win;
 
+    public Chromosome()
+    {
+        this.ann = new ANN();
+        this.win = 0;
+    }
+
     public Chromosome(ANN ann)
     {
         this.ann = ann;
         setFitness();
         this.win = 0;
     }
-
 
 
     public int getWin() {
