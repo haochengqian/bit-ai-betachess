@@ -3,6 +3,7 @@ package alogrithm;
 import chess.Board;
 import chess.Piece;
 import alogrithm.SearchModel;
+import control.RobotTrain;
 //import alogrithm.neural;
 
 import java.util.Map;
@@ -17,14 +18,14 @@ public class EvalModel {
     /******************************************************修改***********************************/
     public int[][] values = new int[2][11];
     public neural neu = new neural();
-    public ANN ann = new ANN();
+    //public ANN ann = new ANN();
     /******************************************************修改结束*************************************/
     /**
      * @param player, eval the situation in player's perspective.
      */
 
 
-    public int eval(Board board, char player) {
+    public int eval(Board board, char player, ANN ann) {
         if(player == 'b') {
             for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
                 Piece piece = stringPieceEntry.getValue();
@@ -104,7 +105,7 @@ public class EvalModel {
 //            System.out.println(sumRed - sumBlack);
 //            System.out.println();
             //System.out.println(sumBlack);
-            System.out.println("ANN\n");
+            //System.out.println("ANN\n");
             switch (player) {
                 case 'r':
                     return (int) (sum_red - sum_black);
@@ -171,7 +172,7 @@ public class EvalModel {
                 }
             }
             int sumRed = values[0][0] + values[0][1] * 8, sumBlack = values[1][0] + values[1][1] * 8;
-            System.out.println("a-b\n");
+            //System.out.println("a-b\n");
             switch (player) {
                 case 'r':
                     return sumRed - sumBlack;

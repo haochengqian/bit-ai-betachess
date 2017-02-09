@@ -1,5 +1,7 @@
 package alogrithm.EvolutionaryProgramming;
 
+import alogrithm.ANN;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -10,20 +12,31 @@ import java.io.IOException;
  */
 public class EvolutionaryProgramming {
 
-    public static void main(String[] args) {
-        int numOfPop = 50;
-        int numOfGen = 10000;
-        Population pop = new Population(numOfPop, true);
+    int numOfPop = 0;
+    int numOfGen = 0;
+    Population pop = null;
+    ANN bestANN = null;
 
-        System.out.println(pop.getFittest().getFitness());
+    public EvolutionaryProgramming(int numOfPop, int numOfGen) {
+        this.numOfPop = numOfPop;
+        this.numOfGen = numOfGen;
+        this.pop = new Population(numOfPop, true);
+        this.bestANN = null;
+    }
 
+    public void evolove() {
         for (int i = 0; i < numOfGen; i++) {
-            pop = EP.Evolution(pop);
+            System.out.println("第" + (i+1) + "代");
+            System.out.println(this.pop.getFittest().ann.getWeights());
+            this.pop = EP.Evolution(this.pop);
         }
 
-        System.out.println(pop.getFittest().getFitness());
+        saveToFile();
+    }
 
-        String str = pop.getFittest().ann.getWeights();
+    public void saveToFile() {
+        String str = this.pop.getFittest().ann.getWeights();
+
         try {
             File annOut = new File("annOut.txt");
             if(!annOut.exists()){
@@ -40,4 +53,34 @@ public class EvolutionaryProgramming {
         }
 
     }
+//    public static void main(String[] args) {
+//        int numOfPop = 50;
+//        int numOfGen = 10000;
+//        Population pop = new Population(numOfPop, true);
+//
+//        System.out.println(pop.getFittest().getFitness());
+//
+//        for (int i = 0; i < numOfGen; i++) {
+//            pop = EP.Evolution(pop);
+//        }
+//
+//        System.out.println(pop.getFittest().getFitness());
+//
+//        String str = pop.getFittest().ann.getWeights();
+//        try {
+//            File annOut = new File("annOut.txt");
+//            if(!annOut.exists()){
+//                annOut.createNewFile();
+//            }
+//            FileWriter fileWritter = new FileWriter(annOut.getName());
+//            BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+//            bufferWritter.write(str);
+//            bufferWritter.close();
+//
+//            System.out.println("Done");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+//    }
 }

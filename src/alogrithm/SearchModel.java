@@ -18,7 +18,7 @@ public class SearchModel {
     private GameController controller = new GameController();
 
 
-    public AlphaBetaNode search(Board board) {
+    public AlphaBetaNode search(Board board, ANN ann) {
         this.board = board;
         if (board.pieces.size() < 28)
             DEPTH = 3;
@@ -42,7 +42,7 @@ public class SearchModel {
         for (AlphaBetaNode n : moves) {
             /* Move*/
             Piece eaten = board.updatePiece(n.piece, n.to);
-            n.value = alphaBeta(DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE, false,board.player);
+            n.value = alphaBeta(DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE, false, board.player, ann);
             /* Select a best move during searching to save time*/
             if (best == null || n.value >= best.value)
                 best = n;
@@ -59,10 +59,10 @@ public class SearchModel {
     }
 
 
-    private int alphaBeta(int depth, int alpha, int beta, boolean isMax,char player) {
+    private int alphaBeta(int depth, int alpha, int beta, boolean isMax, char player, ANN ann) {
         /* Return evaluation if reaching leaf node or any side won.*/
         if (depth == 0 || controller.hasWin(board) != 'x')
-            return new EvalModel().eval(board, player);
+            return new EvalModel().eval(board, player, ann);
         ArrayList<AlphaBetaNode> moves = generateMovesForAll(isMax);
 
         synchronized (this) {
@@ -79,7 +79,7 @@ public class SearchModel {
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
-                                temp[0] = Math.max(finalAlpha, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, false,player=='b'?'r':'b'));
+                                temp[0] = Math.max(finalAlpha, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, false, player=='b'?'r':'b', ann));
                             }
                         }).run();
                         alpha = temp[0];
@@ -87,15 +87,15 @@ public class SearchModel {
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
-                                temp[0] = Math.min(finalBeta, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, true,player=='b'?'r':'b'));
+                                temp[0] = Math.min(finalBeta, alphaBeta(finalDepth - 1, finalAlpha, finalBeta, true, player=='b'?'r':'b', ann));
                             }
                         }).run();
                         beta = temp[0];
                     }
                 }
                 else {
-                    if (isMax) alpha = Math.max(alpha, alphaBeta(depth - 1, alpha, beta, false,player=='b'?'r':'b'));
-                    else beta = Math.min(beta, alphaBeta(depth - 1, alpha, beta, true,player=='b'?'r':'b'));
+                    if (isMax) alpha = Math.max(alpha, alphaBeta(depth - 1, alpha, beta, false, player=='b'?'r':'b', ann));
+                    else beta = Math.min(beta, alphaBeta(depth - 1, alpha, beta, true, player=='b'?'r':'b', ann));
                 }
                 board.updatePiece(n.piece, n.from);
                 if (eaten != null) {

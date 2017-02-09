@@ -1,5 +1,7 @@
 package view;
 
+import alogrithm.ANN;
+import alogrithm.EvolutionaryProgramming.EvolutionaryProgramming;
 import chess.Board;
 import chess.Piece;
 import chess.Rules;
@@ -211,14 +213,19 @@ public class GameView {
 
     class ButtonClickListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            for(int i=1;i<=1;i++){
-                GameController tempGameController = new GameController();
-                trainBoard = tempGameController.playChess();
-                RobotTrain robottrain = new RobotTrain();
-                while(true) {
-                    robottrain.RobotMoveChess(trainBoard);
-                }
-            }
+            EvolutionaryProgramming evolutionaryProgramming = new EvolutionaryProgramming(50, 10);
+            evolutionaryProgramming.evolove();
+//            for(int i = 1; i <= 1; i++){
+//                GameController tempGameController = new GameController();
+//                trainBoard = tempGameController.playChess();
+//                RobotTrain robottrain = new RobotTrain(new ANN());
+//                int times = 0;
+//                while(true) {
+//                    System.out.println(++times);
+//                    System.out.println(robottrain.ann.getWeights());
+//                    robottrain.RobotMoveChess(trainBoard);
+//                }
+//            }
         }
     }
 }

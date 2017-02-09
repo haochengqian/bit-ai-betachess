@@ -22,11 +22,11 @@ public class EP {
         Chromosome newChromosome = new Chromosome(new ANN());
         for (int i = 0; i < chromosome.ann.InNum; i++) {
             for (int j = 0; j < chromosome.ann.HideNum; j++) {
-                newChromosome.ann.w[i][j] = chromosome.ann.w[i][j] * (1 + (alpha * a));
+                newChromosome.ann.w[i][j] = chromosome.ann.w[i][j] * (1 + (alpha * r.nextGaussian()));
             }
         }
         for (int i = 0; i < chromosome.ann.HideNum; i++) {
-            newChromosome.ann.v[i] = chromosome.ann.v[i] * (1 + (alpha * a));
+            newChromosome.ann.v[i] = chromosome.ann.v[i] * (1 + (alpha * r.nextGaussian()));
         }
         return newChromosome;
     }

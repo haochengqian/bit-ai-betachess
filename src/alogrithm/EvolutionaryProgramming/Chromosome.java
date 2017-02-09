@@ -1,6 +1,8 @@
 package alogrithm.EvolutionaryProgramming;
 
 import alogrithm.ANN;
+import control.RobotTrain;
+
 import java.util.Random;
 
 /**
@@ -35,14 +37,18 @@ public class Chromosome {
     }
 
     public void setFitness() {
-        fitness = 0;
-        for (int i = 0; i < ann.InNum; i++) {
-            for (int j = 0; j < ann.HideNum; j++)
-                if (ann.w[i][j] > 0.5) fitness++;
-        }
-        for (int i = 0; i < ann.HideNum; i++) {
-            if (ann.v[i] > 0.5) fitness++;
-        }
+
+        RobotTrain robotTrain = new RobotTrain(this.ann);
+        this.fitness = robotTrain.simulate();
+        System.out.println("The fitness is " + this.fitness);
+//        fitness = 0;
+//        for (int i = 0; i < ann.InNum; i++) {
+//            for (int j = 0; j < ann.HideNum; j++)
+//                if (ann.w[i][j] > 0.5) fitness++;
+//        }
+//        for (int i = 0; i < ann.HideNum; i++) {
+//            if (ann.v[i] > 0.5) fitness++;
+//        }
     }
 
 }

@@ -1,5 +1,6 @@
 package control;
 
+import alogrithm.ANN;
 import alogrithm.AlphaBetaNode;
 import alogrithm.SearchModel;
 import chess.Board;
@@ -82,8 +83,9 @@ public class GameController {
         /**
          * Implements artificial intelligence.
          * */
+        ANN ann = new ANN();
         SearchModel searchModel = new SearchModel();
-        AlphaBetaNode result = searchModel.search(board);
+        AlphaBetaNode result = searchModel.search(board, ann);
 
         view.movePieceFromAI(result.piece, result.to);
         board.updatePiece(result.piece, result.to);
