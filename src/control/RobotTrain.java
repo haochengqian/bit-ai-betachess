@@ -32,6 +32,8 @@ public class RobotTrain {
             winner = robotGameController.hasWin(trainBoard);
 
             times++;
+            System.out.println(trainBoard.player);
+            System.out.println("The time is " + times);
         }
         if (winner == 'b') {
             times = 1000 - times;
