@@ -2,119 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac357e1e-2b0a-452a-883b-e1724c7cc6a1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/Nenual/bp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/alogrithm.uml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/ab.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/board.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/bz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/rz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BetaChess/res/img/selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/BetaChess.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/ChessGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/ANN.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/AlphaBetaNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvalModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Chromosome.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EP.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Population$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Population$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Population.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/SearchModel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/SearchModel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/SearchModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/alogrithm/neural.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/chess/Board.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/chess/Piece.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/chess/Rules.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/control/GameController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/alogrithm.uml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/ab.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/board.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/bz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/rz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/res/img/selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/view/GameView$BoardClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/view/GameView$PieceOnClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/out/production/BetaChess/view/GameView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/alogrithm.uml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/ab.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/board.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/bz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/rz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/res/img/selected.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/ChessGame.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/ANN.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/AlphaBetaNode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EProgramming.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvalModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/Chromosome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/EP.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/EvolutionaryProgramming/Population.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/SearchModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/alogrithm/neural.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/chess/Board.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/chess/Piece.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/chess/Rules.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/control/GameController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/src/view/GameView.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/ChessGame.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/ChessGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvalModel.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvalModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$1.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$2.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/SearchModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/ANN.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/ANN.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Chromosome.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvolutionaryProgramming/Chromosome.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EP.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EP.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alogrithm/ANN.java" afterPath="$PROJECT_DIR$/src/alogrithm/ANN.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alogrithm/EProgramming.java" afterPath="$PROJECT_DIR$/src/alogrithm/EProgramming.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Chromosome.java" afterPath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Chromosome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EP.java" afterPath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.java" afterPath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Population.java" afterPath="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Population.java" />
     </list>
     <ignored path="BetaChess.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -136,22 +34,117 @@
     <favorites_list name="BetaChess" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ChessGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.035971224">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ANN.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alogrithm/ANN.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetaChess.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BetaChess.iml">
+      <file leaf-file-name="EProgramming.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alogrithm/EProgramming.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="17.777779">
+              <caret line="12" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Population.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Population.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chromosome.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Chromosome.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="e#375#376#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EP.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlphaBetaNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alogrithm/AlphaBetaNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EvolutionaryProgramming.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.650289">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Callable.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/concurrent/Callable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#1311#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FutureTask.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/concurrent/FutureTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -172,6 +165,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/view/GameView.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/alogrithm/ANN.java" />
+        <option value="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Population.java" />
+        <option value="$PROJECT_DIR$/src/alogrithm/EProgramming.java" />
+        <option value="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Chromosome.java" />
+        <option value="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EP.java" />
+        <option value="$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.java" />
       </list>
     </option>
   </component>
@@ -181,9 +180,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
+    <option name="x" value="14" />
     <option name="y" value="23" />
-    <option name="width" value="1400" />
+    <option name="width" value="1225" />
     <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -253,19 +252,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
+              <option name="myItemId" value="chess" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetaChess" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetaChess" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alogrithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetaChess" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BetaChess" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alogrithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EvolutionaryProgramming" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,11 +312,32 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
-  <component name="RunManager" selected="Application.ChessGame">
+  <component name="RunManager" selected="Application.EvolutionaryProgramming">
     <configuration default="false" name="ChessGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ChessGame" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="BetaChess" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="EvolutionaryProgramming" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="alogrithm.EvolutionaryProgramming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="alogrithm.EvolutionaryProgramming.EvolutionaryProgramming" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -700,16 +760,21 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.ChessGame" />
+      <item index="1" class="java.lang.String" itemvalue="Application.EvolutionaryProgramming" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.ChessGame" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.EvolutionaryProgramming" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ChessGame" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ac357e1e-2b0a-452a-883b-e1724c7cc6a1" name="Default" comment="" />
@@ -719,33 +784,34 @@
       <workItem from="1486381505895" duration="176000" />
       <workItem from="1486383758909" duration="102000" />
       <workItem from="1486538099207" duration="17000" />
-      <workItem from="1486538119854" duration="127000" />
+      <workItem from="1486538119854" duration="1292000" />
+      <workItem from="1486549243355" duration="8913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="422000" />
+    <option name="totallyTimeSpent" value="10500000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="23" width="1400" height="772" extended-state="0" />
-    <editor active="false" />
+    <frame x="14" y="23" width="1225" height="772" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4679943" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -755,11 +821,21 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -769,7 +845,41 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035971224">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/ANN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BetaChess.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
           <folding />
         </state>
@@ -780,6 +890,101 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/concurrent/FutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/concurrent/Callable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#1311#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/AlphaBetaNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/EProgramming.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.777779">
+          <caret line="12" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/ANN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/Chromosome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alogrithm/EvolutionaryProgramming/EvolutionaryProgramming.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.650289">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

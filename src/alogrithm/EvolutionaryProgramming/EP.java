@@ -1,5 +1,7 @@
 package alogrithm.EvolutionaryProgramming;
 
+import alogrithm.ANN;
+
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Random;
@@ -10,25 +12,22 @@ import java.util.Set;
  */
 public class EP {
 
-    static double alpha = 0.6;
-    static int selectivePressure = 25;
+    final static double alpha = 0.2;
+    final static int selectivePressure = 25;
 
     public static Chromosome Mutation(Chromosome chromosome) {
         Random r = new Random();
         double a = r.nextGaussian();
         double[] newMutationStep = new double[2];
-        for (int i = 0; i < chromosome.getVariableLenght(); i++) {
-            newMutationStep[i] = chromosome.getMutationStep(i) * (1 + (alpha * a));
-            if (newMutationStep[i] > 2){
-                newMutationStep[i] = 2;
+        Chromosome newChromosome = new Chromosome(new ANN());
+        for (int i = 0; i < chromosome.ann.InNum; i++) {
+            for (int j = 0; j < chromosome.ann.HideNum; j++) {
+                newChromosome.ann.w[i][j] = chromosome.ann.w[i][j] * (1 + (alpha * a));
             }
         }
-        double[] newVariable = new double[2];
-        for (int i = 0; i < chromosome.getVariableLenght(); i++) {
-            double b = r.nextGaussian();
-            newVariable[i] = chromosome.getVariable(i) + newMutationStep[i] * b;
+        for (int i = 0; i < chromosome.ann.HideNum; i++) {
+            newChromosome.ann.v[i] = chromosome.ann.v[i] * (1 + (alpha * a));
         }
-        Chromosome newChromosome = new Chromosome(newVariable[0], newVariable[1], newMutationStep[0], newMutationStep[1]);
         return newChromosome;
     }
 
@@ -62,10 +61,10 @@ public class EP {
 
     public static Population Evolution(Population pop) {
         Population newPopulation = new Population(pop.getNumbOfPop()*2, false);
-        for (int i = 0;i<newPopulation.getNumbOfPop();i++){
+        for (int i = 0; i < newPopulation.getNumbOfPop(); i++){
             int j = 0;
             Chromosome x;
-            if(i<pop.getNumbOfPop()){
+            if(i < pop.getNumbOfPop()){
                 x = pop.getChromosome(i);
                 newPopulation.setChromosome(i, x);
             }
