@@ -48,37 +48,37 @@ public class EvalModel {
                     case 'm':
                         if (piece.color == 'r') {
                             values[0][3] += evalPieceValue(3);
-                            values[0][4] += evalPiecePosition(3, piece.position);
+                            values[0][4] += evalPiecePosition(-3, piece.position);
                         } else {
                             values[1][3] += evalPieceValue(3);
-                            values[1][4] += evalPiecePosition(3, reversePosition);
+                            values[1][4] += evalPiecePosition(-3, reversePosition);
                         }
                         break;
                     case 'j':
                         if (piece.color == 'r') {
                             values[0][5] += evalPieceValue(4);
-                            values[0][6] += evalPiecePosition(4, piece.position);
+                            values[0][6] += evalPiecePosition(-4, piece.position);
                         } else {
                             values[1][5] += evalPieceValue(4);
-                            values[1][6] += evalPiecePosition(4, reversePosition);
+                            values[1][6] += evalPiecePosition(-4, reversePosition);
                         }
                         break;
                     case 'p':
                         if (piece.color == 'r') {
                             values[0][7] += evalPieceValue(5);
-                            values[0][8] += evalPiecePosition(5, piece.position);
+                            values[0][8] += evalPiecePosition(-5, piece.position);
                         } else {
                             values[1][7] += evalPieceValue(5);
-                            values[1][8] += evalPiecePosition(5, reversePosition);
+                            values[1][8] += evalPiecePosition(-5, reversePosition);
                         }
                         break;
                     case 'z':
                         if (piece.color == 'r') {
                             values[0][9] += evalPieceValue(6);
-                            values[0][10] += evalPiecePosition(6, piece.position);
+                            values[0][10] += evalPiecePosition(-6, piece.position);
                         } else {
                             values[1][9] += evalPieceValue(6);
-                            values[1][10] += evalPiecePosition(6, reversePosition);
+                            values[1][10] += evalPiecePosition(-6, reversePosition);
                         }
                         break;
                 }
@@ -234,10 +234,10 @@ public class EvalModel {
         if (p == 4) return jPosition[pos[0]][pos[1]];
         if (p == 5) return pPosition[pos[0]][pos[1]];
         if (p == 6) return zPosition[pos[0]][pos[1]];
-        if (p == -3) return mPosition[9 - pos[0]][8 - pos[1]];
-        if (p == -4) return jPosition[9 - pos[0]][8 - pos[1]];
-        if (p == -5) return pPosition[9 - pos[0]][8 - pos[1]];
-        if (p == -6) return zPosition[9 - pos[0]][8 - pos[1]];
+        if (p == -3) return mPosition[9 - pos[0]][pos[1]];
+        if (p == -4) return jPosition[9 - pos[0]][pos[1]];
+        if (p == -5) return pPosition[9 - pos[0]][pos[1]];
+        if (p == -6) return zPosition[9 - pos[0]][pos[1]];
         return -1;
     }
 

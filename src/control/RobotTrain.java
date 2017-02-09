@@ -28,13 +28,15 @@ public class RobotTrain {
         while (winner == 'x' && times < 1000) {
             SearchModel seachModel = new SearchModel();
             AlphaBetaNode result = seachModel.search(trainBoard, this.ann);
+
+ //           System.out.println(trainBoard.player);
+ //           System.out.println("The time is " + times);
+
             trainBoard.updatePiece(result.piece, result.to);
 
             winner = robotGameController.hasWin(trainBoard);
 
             times++;
-            System.out.println(trainBoard.player);
-            System.out.println("The time is " + times);
         }
         if (winner == 'b') {
             times = 1000 - times;
