@@ -30,7 +30,6 @@ public class RobotTrain {
 
         while (winner == 'x' && times < 1000) {
             SearchModel seachModel = new SearchModel();
-            AlphaBetaNode result = seachModel.search(trainBoard, this.ann,flag_ann);
             AlphaBetaNode result = seachModel.search(trainBoard, this.ann);
 
  //           System.out.println(trainBoard.player);
@@ -50,7 +49,7 @@ public class RobotTrain {
                     trainBoard.updatePiece(piece.key, pos);
                 } else {
                     seachModel = new SearchModel();
-                    result = seachModel.search(trainBoard, this.ann, flag_ann);
+                    result = seachModel.search(trainBoard, this.ann);
                     trainBoard.updatePiece(result.piece, result.to);
                 }
             }
