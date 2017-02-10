@@ -2,6 +2,7 @@ package control;
 
 import algorithm.ANN;
 import algorithm.AlphaBetaNode;
+import algorithm.EvolutionaryProgramming.EvolutionaryProgramming;
 import algorithm.SearchModel;
 import chess.Board;
 import chess.Piece;
@@ -83,9 +84,9 @@ public class GameController {
         /**
          * Implements artificial intelligence.
          * */
-        ANN ann = new ANN();
+        ANN ann = EvolutionaryProgramming.readFromFile();
         SearchModel searchModel = new SearchModel();
-        AlphaBetaNode result = searchModel.search(board, ann);
+        AlphaBetaNode result = searchModel.search(board, ann,1);
 
         view.movePieceFromAI(result.piece, result.to);
         board.updatePiece(result.piece, result.to);

@@ -11,16 +11,17 @@ public class Chromosome {
     public ANN ann = null;
     private double fitness;
     private int win;
-
+    public int flag_ann;
     public Chromosome()
     {
         this.ann = new ANN();
         this.win = 0;
     }
 
-    public Chromosome(ANN ann)
+    public Chromosome(ANN ann,int flag_ann)
     {
         this.ann = ann;
+        this.flag_ann=flag_ann;
         setFitness();
         this.win = 0;
     }
@@ -42,7 +43,7 @@ public class Chromosome {
     public void setFitness() {
 
         RobotTrain robotTrain = new RobotTrain(this.ann);
-        this.fitness = robotTrain.simulate();
+        this.fitness = robotTrain.simulate(this.flag_ann);
         System.out.println("The fitness is " + this.fitness);
 //        fitness = 0;
 //        for (int i = 0; i < ann.InNum; i++) {

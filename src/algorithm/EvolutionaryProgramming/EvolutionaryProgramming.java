@@ -2,10 +2,7 @@ package algorithm.EvolutionaryProgramming;
 
 import algorithm.ANN;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by Chris on 2017/2/8.
@@ -51,6 +48,28 @@ public class EvolutionaryProgramming {
             e.printStackTrace();
         }
 
+    }
+
+    public static ANN readFromFile(){
+        String resultw = null;
+        String resultv = null;
+        try {
+            FileReader fileReader = null;
+            BufferedReader bufferedReader = null;
+            String fileName = "annOut.txt";
+            fileReader = new FileReader(fileName);
+            bufferedReader = new BufferedReader(fileReader);
+            try {
+                resultw = bufferedReader.readLine();
+                resultv = bufferedReader.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return ANN.fromWeights(resultw, resultv);
     }
 //    public static void main(String[] args) {
 //        int numOfPop = 50;

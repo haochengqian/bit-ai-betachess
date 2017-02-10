@@ -23,8 +23,8 @@ public class EvalModel {
      */
 
 
-    public int eval(Board board, char player, ANN ann) {
-        if(player == 'r') {
+    public int eval(Board board, char player, ANN ann,int flag_ann) {
+        if(player == 'b') {
             for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
                 Piece piece = stringPieceEntry.getValue();
             /* The table in PiecePosition is for red player in default. To eval black player, needs to perform a mirror transformation. */
@@ -89,6 +89,7 @@ public class EvalModel {
                 sumRed += values[0][i];
                 sumBlack += values[1][i];
             }
+
             sumRed += 7 * (values[0][4] + values[0][6] + values[0][8] + values[0][10]);
             sumBlack += 7 * (values[1][4] + values[1][6] + values[1][8] + values[1][10]);
 
@@ -96,8 +97,15 @@ public class EvalModel {
             double sum_black = ann.evaluate(values[1]);
 
             switch (player) {
-                case 'r':
-                    return (int) (sum_red - sum_black);
+                case 'r':{
+                    if(flag_ann==1){
+                        return (int) (sum_red - sum_black);
+                    }
+                    else{
+                        return (int) (sumRed - sumBlack);
+                    }
+                }
+
                 case 'b':
                     return (int) (sum_black - sum_red);
                 default:
