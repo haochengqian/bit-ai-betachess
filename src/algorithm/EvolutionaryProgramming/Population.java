@@ -24,7 +24,7 @@ public class Population {
                     @Override
                     public void run() {
                         for (int j = k; j < populationSize; j+= threadNum) {
-                            population[j] = new Chromosome(new ANN(),j%2);
+                            population[j] = new Chromosome(new ANN());
                         }
                         latch.countDown();
                     }

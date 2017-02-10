@@ -17,7 +17,7 @@ public class RobotTrain {
         this.times = 0;
     }
 
-    public int simulate(int flag_ann) {
+    public int simulate() {
         System.out.println("Robot starts to train");
         GameController robotGameController = new GameController();
 
@@ -27,7 +27,7 @@ public class RobotTrain {
 
         while (winner == 'x' && times < 1000) {
             SearchModel seachModel = new SearchModel();
-            AlphaBetaNode result = seachModel.search(trainBoard, this.ann,flag_ann);
+            AlphaBetaNode result = seachModel.search(trainBoard, this.ann);
 
  //           System.out.println(trainBoard.player);
  //           System.out.println("The time is " + times);
