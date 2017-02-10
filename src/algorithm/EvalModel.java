@@ -2,8 +2,10 @@ package algorithm;
 
 import chess.Board;
 import chess.Piece;
+import chess.Rules;
 //import algorithm.neural;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -14,8 +16,9 @@ public class EvalModel {
     /*  [red, black] >> [PieceValue, PiecePosition, PieceControl, PieceFlexible, PieceProtect, PieceFeature]*/
     /* However, only PieceValue and PiecePosition are implemented, so the array size is set to 2. */
     /******************************************************修改***********************************/
-    public int[][] values = new int[2][11];
+    public int[][] values = new int[2][12];
     public neural neu = new neural();
+    private int nPointCount=0;
     //public ANN ann = new ANN();
     /******************************************************修改结束*************************************/
     /**
@@ -29,11 +32,23 @@ public class EvalModel {
                 Piece piece = stringPieceEntry.getValue();
             /* The table in PiecePosition is for red player in default. To eval black player, needs to perform a mirror transformation. */
                 int[] reversePosition = new int[]{board.BOARD_HEIGHT - 1 - piece.position[0], piece.position[1]};
+                int moves_number=0;
+                if(piece.character!='b'){
+                    ArrayList<int[]> nxt=new Rules().getNextMove(piece.key,piece.position,new Board(board));
+                    moves_number=nxt.size();
+                }
+
+
+                //System.out.println(moves_number);
                 switch (piece.character) {
                     /*************************************修改****************************/
                     case 'b':
-                        if (piece.color == 'r') values[0][0] += evalPieceValue(0);
-                        else values[1][0] += evalPieceValue(0);
+                        if (piece.color == 'r') {
+                            values[0][0] += evalPieceValue(0);
+                        }
+                        else {
+                            values[1][0] += evalPieceValue(0);
+                        }
                         break;
                     case 's':
                         if (piece.color == 'r') values[0][1] += evalPieceValue(1);
@@ -47,36 +62,44 @@ public class EvalModel {
                         if (piece.color == 'r') {
                             values[0][3] += evalPieceValue(3);
                             values[0][4] += evalPiecePosition(-3, piece.position);
+                            values[0][11]+=evalPieceFlexible(3)*moves_number;
                         } else {
                             values[1][3] += evalPieceValue(3);
                             values[1][4] += evalPiecePosition(-3, reversePosition);
+                            values[1][11]+=evalPieceFlexible(3)*moves_number;
                         }
                         break;
                     case 'j':
                         if (piece.color == 'r') {
                             values[0][5] += evalPieceValue(4);
                             values[0][6] += evalPiecePosition(-4, piece.position);
+                            values[0][11]+=evalPieceFlexible(4);
                         } else {
                             values[1][5] += evalPieceValue(4);
                             values[1][6] += evalPiecePosition(-4, reversePosition);
+                            values[1][11]+=evalPieceFlexible(4);
                         }
                         break;
                     case 'p':
                         if (piece.color == 'r') {
                             values[0][7] += evalPieceValue(5);
                             values[0][8] += evalPiecePosition(-5, piece.position);
+                            values[0][11]+=evalPieceFlexible(5);
                         } else {
                             values[1][7] += evalPieceValue(5);
                             values[1][8] += evalPiecePosition(-5, reversePosition);
+                            values[1][11]+=evalPieceFlexible(5);
                         }
                         break;
                     case 'z':
                         if (piece.color == 'r') {
                             values[0][9] += evalPieceValue(6);
                             values[0][10] += evalPiecePosition(-6, piece.position);
+                            values[0][11]+=evalPieceFlexible(6);
                         } else {
                             values[1][9] += evalPieceValue(6);
                             values[1][10] += evalPiecePosition(-6, reversePosition);
+                            values[1][11]+=evalPieceFlexible(6);
                         }
                         break;
                 }
@@ -248,7 +271,7 @@ public class EvalModel {
     private int evalPieceFlexible(int p) {
         // b | s | x | m | j | p | z
         int[] pieceFlexible = new int[]{0, 1, 1, 13, 7, 7, 15};
-        return 0;
+        return pieceFlexible[p];
     }
 
     private int evalPieceProtect() {
@@ -258,4 +281,6 @@ public class EvalModel {
     private int evalPieceFeature() {
         return 0;
     }
+
+
 }

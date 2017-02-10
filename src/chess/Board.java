@@ -13,6 +13,14 @@ public class Board{
     public Map<String, Piece> pieces;
     public char player = 'r';
     private Piece[][] cells = new Piece[BOARD_HEIGHT][BOARD_WIDTH];
+    public Board(Board b){
+        this.pieces=b.pieces;
+        this.player=b.player;
+        this.cells=b.cells;
+    }
+    public Board(){
+
+    }
 
     public boolean isInside(int[] position) {
         return isInside(position[0], position[1]);
@@ -30,7 +38,6 @@ public class Board{
     public boolean isEmpty(int x, int y) {
         return isInside(x, y) && cells[x][y] == null;
     }
-
 
     public boolean update(Piece piece) {
         int[] pos = piece.position;

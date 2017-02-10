@@ -12,7 +12,7 @@ import java.util.Random;
 */
 
 public class ANN {
-    public static final int InNum = 11;      //输入层节点数
+    public static final int InNum = 12;      //输入层节点数
     public static final int HideNum = 6;     //隐含层节点数
     public static final int OutNum = 1;      //输出层节点数
 
