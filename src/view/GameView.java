@@ -31,6 +31,8 @@ public class GameView {
     private GameController controller;
     private JLabel lblPlayer;
     private JButton lblButton;
+    private JButton lblPutAnn;
+    public int SetAi = 0;
 
     public GameView(GameController gameController) {
         this.controller = gameController;
@@ -62,10 +64,18 @@ public class GameView {
         //*************训练ai按钮
         lblButton = new JButton("训练ai.");
         lblButton.setLocation(10,150);
-        lblButton.setSize(PIECE_WIDTH-10,PIECE_HEIGHT-20);
+        lblButton.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
         lblButton.addActionListener(new ButtonClickListener());
         pane.add(lblButton,0);
         //*************end
+
+        /*选择output作为输入*/
+
+        lblPutAnn = new JButton("加载out.");
+        lblPutAnn.setLocation(10,490);
+        lblPutAnn.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
+        lblPutAnn.addActionListener(new PutAiClickListen());
+        pane.add(lblPutAnn,0);
         /* Initialize chess pieces and listeners on each piece.*/
         Map<String, Piece> pieces = board.pieces;
         for (Map.Entry<String, Piece> stringPieceEntry : pieces.entrySet()) {
@@ -233,6 +243,11 @@ public class GameView {
 //                    robottrain.RobotMoveChess(trainBoard);
 //                }
 //            }
+        }
+    }
+    class PutAiClickListen implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            SetAi = 1;
         }
     }
 }

@@ -84,7 +84,11 @@ public class GameController {
         /**
          * Implements artificial intelligence.
          * */
-        ANN ann = EvolutionaryProgramming.readFromFile();
+        ANN ann;
+        if(view.SetAi == 1){
+            ann = EvolutionaryProgramming.readFromFile();
+        }
+        else ann = new ANN();
         SearchModel searchModel = new SearchModel();
         AlphaBetaNode result = searchModel.search(board, ann,1);
 
