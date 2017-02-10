@@ -40,7 +40,6 @@ public class Board{
         return isInside(x, y) && cells[x][y] == null;
     }
 
-
     public boolean update(Piece piece) {
         int[] pos = piece.position;
         cells[pos[0]][pos[1]] = piece;

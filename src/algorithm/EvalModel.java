@@ -2,6 +2,7 @@ package algorithm;
 
 import chess.Board;
 import chess.Piece;
+import chess.Rules;
 //import algorithm.neural;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class EvalModel {
      */
 
 
-    public int eval(Board board, char player, ANN ann,int flag_ann) {
+    public int eval(Board board, char player, ANN ann) {
         if(player == 'b') {
             for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
                 Piece piece = stringPieceEntry.getValue();
@@ -126,14 +127,8 @@ public class EvalModel {
 
             switch (player) {
                 case 'r':{
-                    if(flag_ann==1){
                         return (int) (sum_red - sum_black);
-                    }
-                    else{
-                        return (int) (sumRed - sumBlack);
-                    }
                 }
-
                 case 'b':
                     return (int) (sum_black - sum_red);
                 default:
@@ -292,4 +287,6 @@ public class EvalModel {
     private int evalPieceFeature() {
         return 0;
     }
+
+
 }

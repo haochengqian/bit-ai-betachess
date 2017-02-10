@@ -90,7 +90,7 @@ public class GameController {
         }
         else ann = new ANN();
         SearchModel searchModel = new SearchModel();
-        AlphaBetaNode result = searchModel.search(board, ann,1);
+        AlphaBetaNode result = searchModel.search(board, ann);
 
         view.movePieceFromAI(result.piece, result.to);
         board.updatePiece(result.piece, result.to);
