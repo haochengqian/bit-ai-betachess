@@ -152,7 +152,7 @@ public class GameView {
                 int[] pos = board.pieces.get(key).position;
                 int[] selectedPiecePos = board.pieces.get(selectedPieceKey).position;
                 /* If an enemy piece already has been selected.*/
-                for (int[] each : Rules.getNextMove(selectedPieceKey, selectedPiecePos, board)) {
+                for (int[] each : new Rules().getNextMove(selectedPieceKey, selectedPiecePos, board)) {
                     if (Arrays.equals(each, pos)) {
                         // Kill self and move that piece.
 
@@ -199,7 +199,7 @@ public class GameView {
                 int[] sPos = new int[]{e.getXOnScreen() - frame.getX(), e.getYOnScreen() - frame.getY()};
                 int[] pos = viewToModelConverter(sPos);
                 int[] selectedPiecePos = board.pieces.get(selectedPieceKey).position;
-                for (int[] each : Rules.getNextMove(selectedPieceKey, selectedPiecePos, board)) {
+                for (int[] each : new Rules().getNextMove(selectedPieceKey, selectedPiecePos, board)) {
                     if (Arrays.equals(each, pos)) {
                         System.out.println("Here");
                         controller.moveChess(selectedPieceKey, pos, board);
@@ -213,8 +213,17 @@ public class GameView {
 
     class ButtonClickListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            EvolutionaryProgramming evolutionaryProgramming = new EvolutionaryProgramming(50, 10);
-            evolutionaryProgramming.evolove();
+            EvolutionaryProgramming evolutionaryProgramming = null;
+            try {
+                evolutionaryProgramming = new EvolutionaryProgramming(50, 10);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+            try {
+                evolutionaryProgramming.evolove();
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
 //            for(int i = 1; i <= 1; i++){
 //                GameController tempGameController = new GameController();
 //                trainBoard = tempGameController.playChess();

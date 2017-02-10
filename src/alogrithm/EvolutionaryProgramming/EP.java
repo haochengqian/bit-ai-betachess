@@ -32,7 +32,7 @@ public class EP {
         return newChromosome;
     }
 
-    public static Population SurvivorSelection(Population pop) {
+    public static Population SurvivorSelection(Population pop) throws InterruptedException {
         pop.clearWin();
         for (int i = 0; i < pop.getNumbOfPop(); i++) {
             Chromosome y = pop.getChromosome(i);
@@ -60,7 +60,7 @@ public class EP {
         return newPopulation;
     }
 
-    public static Population Evolution(Population pop) {
+    public static Population Evolution(Population pop) throws InterruptedException {
         Population newPopulation = new Population(pop.getNumbOfPop()*2, false);
         for (int i = 0; i < newPopulation.getNumbOfPop(); i++){
             int j = 0;

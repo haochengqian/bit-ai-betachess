@@ -119,7 +119,7 @@ public class SearchModel {
             Piece piece = stringPieceEntry.getValue();
             if (isMax && piece.color == 'r') continue;
             if (!isMax && piece.color == 'b') continue;
-            for (int[] nxt : Rules.getNextMove(piece.key, piece.position, board))
+            for (int[] nxt : new Rules().getNextMove(piece.key, piece.position, board))
                 moves.add(new AlphaBetaNode(piece.key, piece.position, nxt));
         }
         return moves;

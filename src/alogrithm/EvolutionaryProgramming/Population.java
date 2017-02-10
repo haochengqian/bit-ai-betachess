@@ -1,9 +1,11 @@
 package alogrithm.EvolutionaryProgramming;
 
 import alogrithm.ANN;
+import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by Chris on 2017/2/8.
@@ -11,13 +13,32 @@ import java.util.Comparator;
 public class Population {
 
     public Chromosome[] population;
+    private final int threadNum =5;
 
-    public Population(int populationSize, boolean create) {
+    public Population(int populationSize, boolean create) throws InterruptedException {
         population = new Chromosome[populationSize];
         if (create) {
-            for (int i = 0; i < populationSize; i++) {
-                this.population[i] = new Chromosome(new ANN());
+            final CountDownLatch latch=new CountDownLatch(threadNum);
+            for(int i = 0; i< threadNum; i++) {
+                final int k=i;
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        for (int j = k; j < populationSize; j+= threadNum) {
+                            population[j] = new Chromosome(new ANN());
+                        }
+                        latch.countDown();
+                    }
+                }).start();
             }
+            try {
+                latch.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            /*for (int i = 0; i < populationSize; i++) {
+                this.population[i] = new Chromosome(new ANN());
+            }*/
         }
     }
 

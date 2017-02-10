@@ -9,7 +9,6 @@ import view.GameView;
  */
 public class ChessGame {
     private Board board;
-
     private GameController controller;
     private GameView view;
 

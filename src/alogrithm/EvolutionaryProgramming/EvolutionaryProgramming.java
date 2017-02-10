@@ -17,20 +17,19 @@ public class EvolutionaryProgramming {
     Population pop = null;
     ANN bestANN = null;
 
-    public EvolutionaryProgramming(int numOfPop, int numOfGen) {
+    public EvolutionaryProgramming(int numOfPop, int numOfGen) throws InterruptedException {
         this.numOfPop = numOfPop;
         this.numOfGen = numOfGen;
         this.pop = new Population(numOfPop, true);
         this.bestANN = null;
     }
 
-    public void evolove() {
+    public void evolove() throws InterruptedException {
         for (int i = 0; i < numOfGen; i++) {
             System.out.println("第" + (i+1) + "代");
             System.out.println(this.pop.getFittest().ann.getWeights());
             this.pop = EP.Evolution(this.pop);
         }
-
         saveToFile();
     }
 
