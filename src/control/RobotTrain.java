@@ -2,8 +2,11 @@ package control;
 
 import algorithm.ANN;
 import algorithm.AlphaBetaNode;
+import algorithm.PostApi;
 import algorithm.SearchModel;
 import chess.Board;
+import chess.Piece;
+
 /**
  * Created by haochengqian on 2017/2/8.
  */
@@ -28,12 +31,24 @@ public class RobotTrain {
         while (winner == 'x' && times < 1000) {
             SearchModel seachModel = new SearchModel();
             AlphaBetaNode result = seachModel.search(trainBoard, this.ann,flag_ann);
-
- //           System.out.println(trainBoard.player);
- //           System.out.println("The time is " + times);
-
             trainBoard.updatePiece(result.piece, result.to);
 
+            synchronized (this) {
+                PostApi postapi = new PostApi();
+                String resultGet = "";
+                resultGet = postapi.sendGet("http://api.chessdb.cn:81/chessdb.php?action=query&egtbmetric=dtc&egtbmetric=dtm&board=", trainBoard.fetchFen());
+                int[] pos = postapi.processInf(resultGet);
+                if (pos[0] != Integer.MAX_VALUE) {
+                    Piece piece = trainBoard.getPiece(pos[1], pos[0]);
+                    pos[0] = pos[3];
+                    pos[1] = pos[2];
+                    trainBoard.updatePiece(piece.key, pos);
+                } else {
+                    seachModel = new SearchModel();
+                    result = seachModel.search(trainBoard, this.ann, flag_ann);
+                    trainBoard.updatePiece(result.piece, result.to);
+                }
+            }
             winner = robotGameController.hasWin(trainBoard);
 
             times++;

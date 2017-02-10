@@ -1,5 +1,6 @@
 package chess;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -11,6 +12,7 @@ import java.util.Map;
 public class Board{
     public final int BOARD_WIDTH = 9, BOARD_HEIGHT = 10;
     public Map<String, Piece> pieces;
+    public Map changeFEN;
     public char player = 'r';
     private Piece[][] cells = new Piece[BOARD_HEIGHT][BOARD_WIDTH];
 
@@ -57,6 +59,37 @@ public class Board{
         int[] origPos = pieces.get(key).position;
         cells[origPos[0]][origPos[1]] = pieces.get(key);
         return true;
+    }
+
+    public String fetchFen(){
+        changeFEN = new HashMap<String,String>();
+        changeFEN.put("bj","r");changeFEN.put("bm","n");changeFEN.put("bx","b");changeFEN.put("bs","a");
+        changeFEN.put("bb","k");changeFEN.put("bp","c");changeFEN.put("bz","p");
+        changeFEN.put("rj","R");changeFEN.put("rm","N");changeFEN.put("rx","B");changeFEN.put("rs","A");
+        changeFEN.put("rb","K");changeFEN.put("rp","C");changeFEN.put("rz","P");
+        StringBuffer fen = new StringBuffer("");
+        for(int i = 0;i<BOARD_HEIGHT;i++) {
+            int nullstep = 0;
+            for(int j=0;j<BOARD_WIDTH;j++){
+                Piece temp = getPiece(i,j);
+                if(temp == null){
+                    nullstep++;
+                }
+                else {
+                    if(nullstep!=0)
+                        fen.append(nullstep);
+                    String c = (String) changeFEN.get(String.valueOf(temp.color)+String.valueOf(temp.character));
+                    fen.append(c);
+                    nullstep = 0;
+                }
+            }
+            if(nullstep!=0)
+                fen.append(nullstep);
+            if(i+1<BOARD_HEIGHT) fen.append("/");
+        }
+        fen.append("%20");
+        fen.append(this.player=='r'?"w":"b");
+        return fen.toString();
     }
 
     public Piece getPiece(int[] pos) {
