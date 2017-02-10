@@ -236,7 +236,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFaIx88ELITXyo="
 					},
-					"name": "alogrithm",
+					"name": "algorithm",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -5751,7 +5751,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from alogrithm)",
+													"text": "(from algorithm)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -6188,7 +6188,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from alogrithm)",
+													"text": "(from algorithm)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -6886,7 +6886,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from alogrithm)",
+													"text": "(from algorithm)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -7410,7 +7410,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from alogrithm)",
+													"text": "(from algorithm)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8298,7 +8298,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from alogrithm)",
+													"text": "(from algorithm)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8764,7 +8764,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from alogrithm)",
+													"text": "(from algorithm)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -16666,7 +16666,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "alogrithm",
+											"text": "algorithm",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -16867,7 +16867,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from alogrithm)",
+											"text": "(from algorithm)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -20976,7 +20976,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "alogrithm",
+											"text": "algorithm",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false

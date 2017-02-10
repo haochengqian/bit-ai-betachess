@@ -1,12 +1,10 @@
 package view;
 
-import alogrithm.ANN;
-import alogrithm.EvolutionaryProgramming.EvolutionaryProgramming;
+import algorithm.EvolutionaryProgramming.EvolutionaryProgramming;
 import chess.Board;
 import chess.Piece;
 import chess.Rules;
 import control.GameController;
-import control.RobotTrain;
 
 import javax.swing.*;
 import java.awt.event.*;

@@ -1,4 +1,4 @@
-package alogrithm;
+package algorithm;
 
 /**
  * Created by Tong on 12.18.

@@ -1,8 +1,8 @@
 package control;
 
-import alogrithm.ANN;
-import alogrithm.AlphaBetaNode;
-import alogrithm.SearchModel;
+import algorithm.ANN;
+import algorithm.AlphaBetaNode;
+import algorithm.SearchModel;
 import chess.Board;
 /**
  * Created by haochengqian on 2017/2/8.

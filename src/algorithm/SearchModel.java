@@ -1,4 +1,4 @@
-package alogrithm;
+package algorithm;
 
 import chess.Board;
 import chess.Piece;

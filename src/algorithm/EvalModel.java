@@ -1,10 +1,8 @@
-package alogrithm;
+package algorithm;
 
 import chess.Board;
 import chess.Piece;
-import alogrithm.SearchModel;
-import control.RobotTrain;
-//import alogrithm.neural;
+//import algorithm.neural;
 
 import java.util.Map;
 
