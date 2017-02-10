@@ -15,7 +15,14 @@ public class Board{
     public Map changeFEN;
     public char player = 'r';
     private Piece[][] cells = new Piece[BOARD_HEIGHT][BOARD_WIDTH];
+    public Board(Board b){
+        this.pieces=b.pieces;
+        this.player=b.player;
+        this.cells=b.cells;
+    }
+    public Board(){
 
+    }
     public boolean isInside(int[] position) {
         return isInside(position[0], position[1]);
     }
