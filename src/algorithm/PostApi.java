@@ -93,6 +93,13 @@ public class PostApi {
             }
             int[] pos = new int[4];
             Integer s;
+            if(word[1].length()!=4){
+                System.out.println("word[1]异常！");
+                pos = new int[4];
+                pos[0] = Integer.MAX_VALUE;
+                return pos;
+            }
+
             for (int i = 0; i < 4; i++) {
                 s = (Integer) mapw.get(word[1].charAt(i));
                 pos[i] = s.intValue();

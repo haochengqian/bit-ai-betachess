@@ -47,7 +47,7 @@ public class RobotTrain {
                     trainBoard.updatePiece(result.piece, result.to);
                 }
             }
-
+            times++;
             seachModel = new SearchModel();
             result = seachModel.search(trainBoard, this.ann);
 
@@ -64,7 +64,7 @@ public class RobotTrain {
             times = 1000 - times;
         }
         if (winner == 'x') {
-            times = 0;
+            times = 500;
         }
         System.out.println(winner);
         return times;
