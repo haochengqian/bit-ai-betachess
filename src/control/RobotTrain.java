@@ -25,18 +25,12 @@ public class RobotTrain {
         GameController robotGameController = new GameController();
 
         Board trainBoard = robotGameController.playChess();
+        SearchModel seachModel;
+        AlphaBetaNode result;
 
         char winner = 'x';
 
         while (winner == 'x' && times < 1000) {
-            SearchModel seachModel = new SearchModel();
-            AlphaBetaNode result = seachModel.search(trainBoard, this.ann);
-
- //           System.out.println(trainBoard.player);
- //           System.out.println("The time is " + times);
-
-            trainBoard.updatePiece(result.piece, result.to);
-
             synchronized (this) {
                 PostApi postapi = new PostApi();
                 String resultGet = "";
@@ -53,6 +47,15 @@ public class RobotTrain {
                     trainBoard.updatePiece(result.piece, result.to);
                 }
             }
+
+            seachModel = new SearchModel();
+            result = seachModel.search(trainBoard, this.ann);
+
+            //           System.out.println(trainBoard.player);
+            //           System.out.println("The time is " + times);
+
+            trainBoard.updatePiece(result.piece, result.to);
+
             winner = robotGameController.hasWin(trainBoard);
 
             times++;

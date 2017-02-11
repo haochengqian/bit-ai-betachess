@@ -12,7 +12,7 @@ import java.util.concurrent.CountDownLatch;
 public class Population {
 
     public Chromosome[] population;
-    private final int threadNum =5;
+    private final int threadNum = 5;
 
     public Population(int populationSize, boolean create) throws InterruptedException {
         population = new Chromosome[populationSize];

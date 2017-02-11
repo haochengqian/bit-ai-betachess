@@ -24,7 +24,7 @@ public class PostApi {
         String result = "";
         BufferedReader in = null;
         try {
-            String urlNameString = url + "?" + param;
+            String urlNameString = url + param;
             URL realUrl = new URL(urlNameString);
             // 打开和URL之间的连接
             URLConnection connection = realUrl.openConnection();
@@ -47,7 +47,7 @@ public class PostApi {
             }
         } catch (Exception e) {
             System.out.println("发送GET请求出现异常！" + e);
-            e.printStackTrace();
+            return "nobestmov";
         }
         // 使用finally块来关闭输入流
         finally {
@@ -56,7 +56,8 @@ public class PostApi {
                     in.close();
                 }
             } catch (Exception e2) {
-                e2.printStackTrace();
+                System.out.println("CLOSE INPUT出现异常！" + e2);
+                return "nobestmov";
             }
         }
 //        System.out.println(result);
@@ -82,6 +83,14 @@ public class PostApi {
             return pos;
         }
         else{
+            try{
+                int length = word[1].length();
+            }catch (Exception e2) {
+                System.out.println("word[1]为空出现异常！" + e2);
+                int[] pos = new int[4];
+                pos[0] = Integer.MAX_VALUE;
+                return pos;
+            }
             int[] pos = new int[4];
             Integer s;
             for (int i = 0; i < 4; i++) {
