@@ -26,6 +26,7 @@ public class EvolutionaryProgramming {
             System.out.println("第" + (i+1) + "代");
             System.out.println(this.pop.getFittest().ann.getWeights());
             this.pop = EP.Evolution(this.pop);
+            saveToAllFile();
         }
         saveToFile();
     }
@@ -48,6 +49,31 @@ public class EvolutionaryProgramming {
             e.printStackTrace();
         }
 
+    }
+
+    public void saveToAllFile() {
+
+        for (int i = 0; i < this.pop.getNumbOfPop(); i++) {
+            Chromosome chromosome = this.pop.getChromosome(i);
+
+            String fileName = "annOut" + i + ".txt";
+            String str = chromosome.ann.getWeights();
+
+            try {
+                File annOut = new File(fileName);
+                if(!annOut.exists()){
+                    annOut.createNewFile();
+                }
+                FileWriter fileWritter = new FileWriter(annOut.getName());
+                BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+                bufferWritter.write(str);
+                bufferWritter.close();
+
+                System.out.println("Done");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static ANN readFromFile(){
