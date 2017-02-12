@@ -8,9 +8,9 @@ import control.RobotTrain;
  */
 public class Chromosome {
 
-    public ANN ann = null;
-    private double fitness;
-    private int win;
+    public ANN ann = null;  // ANN for training
+    private double fitness; // Fitness of ANN
+    private int win;        // Win times in SurvivorSelection
     public Chromosome()
     {
         this.ann = new ANN();
@@ -33,24 +33,14 @@ public class Chromosome {
         this.win = win;
     }
 
-    // TODO: ...
     public double getFitness() {
         return fitness;
     }
 
     public void setFitness() {
-
         RobotTrain robotTrain = new RobotTrain(this.ann);
         this.fitness = robotTrain.simulate();
         System.out.println("The fitness is " + this.fitness);
-//        fitness = 0;
-//        for (int i = 0; i < ann.InNum; i++) {
-//            for (int j = 0; j < ann.HideNum; j++)
-//                if (ann.w[i][j] > 0.5) fitness++;
-//        }
-//        for (int i = 0; i < ann.HideNum; i++) {
-//            if (ann.v[i] > 0.5) fitness++;
-//        }
     }
 
 }

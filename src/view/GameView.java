@@ -42,7 +42,7 @@ public class GameView {
         this.board = board;
         frame = new JFrame("Beta Chess");
         frame.setIconImage(new ImageIcon("res/img/icon.png").getImage());
-        frame.setSize(VIEW_WIDTH, VIEW_HEIGHT + 40);
+        frame.setSize(VIEW_WIDTH, VIEW_HEIGHT + 75);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pane = new JLayeredPane();
@@ -61,21 +61,22 @@ public class GameView {
         lblPlayer.setSize(PIECE_WIDTH, PIECE_HEIGHT);
         pane.add(lblPlayer, 0);
 
+        /*选择output作为输入*/
+        lblPutAnn = new JButton("加载ANN");
+        lblPutAnn.setLocation(50, 715);
+        lblPutAnn.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
+        lblPutAnn.addActionListener(new PutAiClickListen());
+        pane.add(lblPutAnn,0);
+
         //*************训练ai按钮
-        lblButton = new JButton("训练ai.");
-        lblButton.setLocation(10,150);
+        lblButton = new JButton("训练AI");
+        lblButton.setLocation(150, 715);
         lblButton.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
         lblButton.addActionListener(new ButtonClickListener());
         pane.add(lblButton,0);
         //*************end
 
-        /*选择output作为输入*/
 
-        lblPutAnn = new JButton("加载out.");
-        lblPutAnn.setLocation(10,490);
-        lblPutAnn.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
-        lblPutAnn.addActionListener(new PutAiClickListen());
-        pane.add(lblPutAnn,0);
         /* Initialize chess pieces and listeners on each piece.*/
         Map<String, Piece> pieces = board.pieces;
         for (Map.Entry<String, Piece> stringPieceEntry : pieces.entrySet()) {
@@ -91,7 +92,6 @@ public class GameView {
             pane.add(lblPiece, 0);
 
         }
-
 
         frame.setVisible(true);
     }
@@ -164,7 +164,6 @@ public class GameView {
                     if (Arrays.equals(each, pos)) {
                         // Kill self and move that piece.
 
-                        System.out.println("Here~~~");
                         pane.remove(pieceObjects.get(key));
 
                         pieceObjects.remove(key);
@@ -189,7 +188,6 @@ public class GameView {
                     pieceFrameKey = "Frame";
                     pieceObjects.put(pieceFrameKey, lblPieceFrame);
                     pane.add(lblPieceFrame, 0);
-                    System.out.println(pieceFrameKey);
 
                 } else {
                     JLabel pieceFrameObject = pieceObjects.get(pieceFrameKey);
@@ -209,7 +207,6 @@ public class GameView {
                 int[] selectedPiecePos = board.pieces.get(selectedPieceKey).position;
                 for (int[] each : new Rules().getNextMove(selectedPieceKey, selectedPiecePos, board)) {
                     if (Arrays.equals(each, pos)) {
-                        System.out.println("Here");
                         controller.moveChess(selectedPieceKey, pos, board);
                         movePieceFromModel(selectedPieceKey, pos);
                         break;
@@ -232,17 +229,6 @@ public class GameView {
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
             }
-//            for(int i = 1; i <= 1; i++){
-//                GameController tempGameController = new GameController();
-//                trainBoard = tempGameController.playChess();
-//                RobotTrain robottrain = new RobotTrain(new ANN());
-//                int times = 0;
-//                while(true) {
-//                    System.out.println(++times);
-//                    System.out.println(robottrain.ann.getWeights());
-//                    robottrain.RobotMoveChess(trainBoard);
-//                }
-//            }
         }
     }
     class PutAiClickListen implements ActionListener{

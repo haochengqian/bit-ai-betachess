@@ -18,7 +18,6 @@ public class EvalModel {
     /* However, only PieceValue and PiecePosition are implemented, so the array size is set to 2. */
     /******************************************************修改***********************************/
     public int[][] values = new int[2][12];
-    public neural neu = new neural();
     private int nPointCount=0;
     //public ANN ann = new ANN();
     /******************************************************修改结束*************************************/

@@ -29,9 +29,7 @@ public class ChessGame {
     public void run() throws InterruptedException {
         while (controller.hasWin(board) == 'x') {
 
-            System.out.println(board.fetchFen());
             PostApi text = new PostApi();
-            System.out.println(text.sendGet("http://api.chessdb.cn:81/chessdb.php?action=query&egtbmetric=dtc&egtbmetric=dtm&board=",board.fetchFen()));
 
 
             view.showPlayer('r');

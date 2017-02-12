@@ -35,9 +35,6 @@ public class Population {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            /*for (int i = 0; i < populationSize; i++) {
-                this.population[i] = new Chromosome(new ANN());
-            }*/
         }
     }
 

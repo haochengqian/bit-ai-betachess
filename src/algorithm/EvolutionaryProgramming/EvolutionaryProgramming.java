@@ -26,11 +26,11 @@ public class EvolutionaryProgramming {
             System.out.println("第" + (i+1) + "代");
             System.out.println(this.pop.getFittest().ann.getWeights());
             saveToFile();
-            saveToAllFile();
+            saveAllToFile();
             this.pop = EP.Evolution(this.pop);
         }
         saveToFile();
-        saveToAllFile();
+        saveAllToFile();
     }
 
     public void saveToFile() {
@@ -53,7 +53,7 @@ public class EvolutionaryProgramming {
 
     }
 
-    public void saveToAllFile() {
+    public void saveAllToFile() {
 
         for (int i = 0; i < this.pop.getNumbOfPop(); i++) {
             Chromosome chromosome = this.pop.getChromosome(i);
@@ -70,8 +70,6 @@ public class EvolutionaryProgramming {
                 BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
                 bufferWritter.write(str);
                 bufferWritter.close();
-
-                System.out.println("Done");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -99,34 +97,4 @@ public class EvolutionaryProgramming {
         }
         return ANN.fromWeights(resultw, resultv);
     }
-//    public static void main(String[] args) {
-//        int numOfPop = 50;
-//        int numOfGen = 10000;
-//        Population pop = new Population(numOfPop, true);
-//
-//        System.out.println(pop.getFittest().getFitness());
-//
-//        for (int i = 0; i < numOfGen; i++) {
-//            pop = EP.Evolution(pop);
-//        }
-//
-//        System.out.println(pop.getFittest().getFitness());
-//
-//        String str = pop.getFittest().ann.getWeights();
-//        try {
-//            File annOut = new File("annOut.txt");
-//            if(!annOut.exists()){
-//                annOut.createNewFile();
-//            }
-//            FileWriter fileWritter = new FileWriter(annOut.getName());
-//            BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-//            bufferWritter.write(str);
-//            bufferWritter.close();
-//
-//            System.out.println("Done");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-//    }
 }
