@@ -25,10 +25,12 @@ public class EvolutionaryProgramming {
         for (int i = 0; i < numOfGen; i++) {
             System.out.println("第" + (i+1) + "代");
             System.out.println(this.pop.getFittest().ann.getWeights());
-            this.pop = EP.Evolution(this.pop);
+            saveToFile();
             saveToAllFile();
+            this.pop = EP.Evolution(this.pop);
         }
         saveToFile();
+        saveToAllFile();
     }
 
     public void saveToFile() {
