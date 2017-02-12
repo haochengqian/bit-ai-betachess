@@ -102,6 +102,14 @@ public class PostApi {
 
             for (int i = 0; i < 4; i++) {
                 s = (Integer) mapw.get(word[1].charAt(i));
+                try{
+                    pos[i] = s.intValue();
+                }catch (Exception e2) {
+                    System.out.println("word[1]为空出现异常！" + e2);
+                    pos = new int[4];
+                    pos[0] = Integer.MAX_VALUE;
+                    return pos;
+                }
                 pos[i] = s.intValue();
             }
             return pos;
