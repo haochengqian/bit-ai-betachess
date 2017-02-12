@@ -33,9 +33,12 @@ public class RobotTrain {
         while (winner == 'x' && times < 1000) {
             synchronized (this) {
                 PostApi postapi = new PostApi();
+              //  long startTime=System.nanoTime();
                 String resultGet = "";
                 resultGet = postapi.sendGet("http://api.chessdb.cn:81/chessdb.php?action=query&egtbmetric=dtc&egtbmetric=dtm&board=", trainBoard.fetchFen());
                 int[] pos = postapi.processInf(resultGet);
+            //    long endTime=System.nanoTime();
+          //      System.out.println("程序运行时间： "+(endTime-startTime)+"ns");
                 if (pos[0] != Integer.MAX_VALUE) {
                     Piece piece = trainBoard.getPiece(pos[1], pos[0]);
                     pos[0] = pos[3];
@@ -47,7 +50,10 @@ public class RobotTrain {
                     trainBoard.updatePiece(result.piece, result.to);
                 }
             }
+            winner = robotGameController.hasWin(trainBoard);
             times++;
+            if(winner != 'x' && times >= 1000)
+                break;
             seachModel = new SearchModel();
             result = seachModel.search(trainBoard, this.ann);
 
