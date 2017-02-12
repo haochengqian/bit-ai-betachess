@@ -28,7 +28,7 @@ public class EvalModel {
 
 
     public int eval(Board board, char player, ANN ann) {
-        if(player == 'b') {
+        if(player == 'r') {
             for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
                 Piece piece = stringPieceEntry.getValue();
             /* The table in PiecePosition is for red player in default. To eval black player, needs to perform a mirror transformation. */

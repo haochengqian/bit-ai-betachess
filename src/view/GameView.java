@@ -223,7 +223,7 @@ public class GameView {
         public void actionPerformed(ActionEvent e){
             EvolutionaryProgramming evolutionaryProgramming = null;
             try {
-                evolutionaryProgramming = new EvolutionaryProgramming(10, 20);
+                evolutionaryProgramming = new EvolutionaryProgramming(50, 20);
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
             }

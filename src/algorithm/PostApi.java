@@ -60,7 +60,6 @@ public class PostApi {
                 return "nobestmov";
             }
         }
-//        System.out.println(result);
         return result;
     }
 

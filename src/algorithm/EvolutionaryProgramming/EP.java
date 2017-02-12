@@ -11,7 +11,7 @@ import java.util.Set;
 public class EP {
 
     final static double alpha = 0.2;
-    final static int selectivePressure = 5;
+    final static int selectivePressure = 25;
 
     public static Chromosome Mutation(Chromosome chromosome) {
         Random r = new Random();
