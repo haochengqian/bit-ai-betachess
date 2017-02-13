@@ -15,33 +15,14 @@ public class ChessGame {
     private Board board;
     private GameController controller;
     private GameView view;
-    private String filename="高山流水-女子十二乐坊.mp3";
-    private Player player;
 
     public static void main(String[] args) throws InterruptedException {
         ChessGame game = new ChessGame();
         //game.play();
         game.init();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                game.play();
-            }
-        }).start();
         game.run();
-
     }
-    public void play() {
-        try {
-            BufferedInputStream buffer = new BufferedInputStream(
-                    new FileInputStream(filename));
-            player = new Player(buffer);
-            player.play();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
 
-    }
     public void init() {
         controller = new GameController();
         board = controller.playChess();

@@ -5,9 +5,12 @@ import chess.Board;
 import chess.Piece;
 import chess.Rules;
 import control.GameController;
+import javazoom.jl.player.Player;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +36,10 @@ public class GameView {
     private JLabel lblPlayer;
     private JButton lblButton;
     private JButton lblPutAnn;
+    private Player player;
+    private String musicName = "高山流水-女子十二乐坊.mp3";
     public int SetAi = 0;
+    public boolean isPlayingMusic = false;
 
     public GameView(GameController gameController) {
         this.controller = gameController;
@@ -43,7 +49,7 @@ public class GameView {
         this.board = board;
         frame = new JFrame("Beta Chess");
         frame.setIconImage(new ImageIcon("res/img/icon.png").getImage());
-        frame.setSize(VIEW_WIDTH, VIEW_HEIGHT + 75);
+        frame.setSize(VIEW_WIDTH + 180, VIEW_HEIGHT + 22);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pane = new JLayeredPane();
@@ -64,17 +70,24 @@ public class GameView {
 
         /*选择output作为输入*/
         lblPutAnn = new JButton("加载ANN");
-        lblPutAnn.setLocation(50, 715);
+        lblPutAnn.setLocation(710, 50);
         lblPutAnn.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
         lblPutAnn.addActionListener(new PutAiClickListen());
         pane.add(lblPutAnn,0);
 
         //*************训练ai按钮
         lblButton = new JButton("训练AI");
-        lblButton.setLocation(150, 715);
+        lblButton.setLocation(800, 50);
         lblButton.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
         lblButton.addActionListener(new ButtonClickListener());
         pane.add(lblButton,0);
+
+        /*播放音乐*/
+        lblPutAnn = new JButton("播放音乐");
+        lblPutAnn.setLocation(710, 120);
+        lblPutAnn.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
+        lblPutAnn.addActionListener(new PlayMusicClickListener());
+        pane.add(lblPutAnn,0);
         //*************end
 
 
@@ -269,4 +282,28 @@ public class GameView {
             SetAi = 1;
         }
     }
+
+    class PlayMusicClickListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            if (isPlayingMusic == false) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            BufferedInputStream buffer = new BufferedInputStream(
+                                    new FileInputStream(musicName));
+                            player = new Player(buffer);
+                            player.play();
+                        } catch (Exception e) {
+                            System.out.println(e);
+                        }
+                    }
+                }).start();
+            } else {
+                player.close();
+            }
+            isPlayingMusic = !isPlayingMusic;
+        }
+    }
+
 }
