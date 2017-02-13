@@ -32,7 +32,7 @@ public class GameView {
     private String pieceFrameKey;
     public JFrame frame;
     private JLayeredPane pane;
-    private GameController controller;
+    public GameController controller;
     private JLabel lblPlayer;
     private JButton lblButton;
     private JButton lblPutAnn;
@@ -48,7 +48,7 @@ public class GameView {
 
     public void init(final Board board) {
         this.board = board;
-        if (true) {
+        if (reStart==false) {
 
 
             frame = new JFrame("Beta Chess");

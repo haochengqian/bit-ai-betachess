@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac357e1e-2b0a-452a-883b-e1724c7cc6a1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/ChessGame.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/ChessGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$BoardClickListener.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$BoardClickListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PieceOnClickListener.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PieceOnClickListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PlayMusicClickListener$1.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PlayMusicClickListener$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PlayMusicClickListener.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PlayMusicClickListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/view/GameView.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/view/GameView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ChessGame.java" afterPath="$PROJECT_DIR$/src/ChessGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/GameView.java" afterPath="$PROJECT_DIR$/src/view/GameView.java" />
     </list>
     <ignored path="BetaChess.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,16 +65,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="212" column="9" lean-forward="true" selection-start-line="212" selection-start-column="9" selection-end-line="212" selection-end-column="9" />
+            <state relative-caret-position="133">
+              <caret line="54" column="43" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
               <folding>
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="e#1480#1481#0" expanded="true" />
-                <element signature="e#11342#11343#0" expanded="true" />
-                <element signature="e#11375#11376#0" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#1479#1480#0" expanded="true" />
+                <element signature="e#11351#11352#0" expanded="true" />
+                <element signature="e#11384#11385#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChessGame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChessGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="398">
+              <caret line="79" column="33" lean-forward="true" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,8 +192,8 @@
         <option value="$PROJECT_DIR$/src/algorithm/EvolutionaryProgramming/EP.java" />
         <option value="$PROJECT_DIR$/src/algorithm/EvalModel.java" />
         <option value="$PROJECT_DIR$/src/control/RobotTrain.java" />
-        <option value="$PROJECT_DIR$/src/view/GameView.java" />
         <option value="$PROJECT_DIR$/src/ChessGame.java" />
+        <option value="$PROJECT_DIR$/src/view/GameView.java" />
       </list>
     </option>
   </component>
@@ -766,10 +774,10 @@
         <state relative-caret-position="0">
           <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
           <folding>
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#11342#11343#0" expanded="true" />
-            <element signature="e#11375#11376#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#11351#11352#0" expanded="true" />
+            <element signature="e#11384#11385#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -830,10 +838,10 @@
         <state relative-caret-position="0">
           <caret line="220" column="68" lean-forward="false" selection-start-line="220" selection-start-column="68" selection-end-line="220" selection-end-column="68" />
           <folding>
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#11342#11343#0" expanded="true" />
-            <element signature="e#11375#11376#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#11351#11352#0" expanded="true" />
+            <element signature="e#11384#11385#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1097,25 +1105,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
+    <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="212" column="9" lean-forward="true" selection-start-line="212" selection-start-column="9" selection-end-line="212" selection-end-column="9" />
+        <state relative-caret-position="398">
+          <caret line="79" column="33" lean-forward="true" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
           <folding>
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#11342#11343#0" expanded="true" />
-            <element signature="e#11375#11376#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
+    <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="54" column="43" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#11351#11352#0" expanded="true" />
+            <element signature="e#11384#11385#0" expanded="true" />
           </folding>
         </state>
       </provider>
