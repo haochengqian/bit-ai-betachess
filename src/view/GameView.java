@@ -293,6 +293,7 @@ public class GameView {
                             BufferedInputStream buffer = new BufferedInputStream(
                                     new FileInputStream(musicName));
                             player = new Player(buffer);
+                            while(true)
                             player.play();
                         } catch (Exception e) {
                             System.out.println(e);
