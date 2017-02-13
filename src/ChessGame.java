@@ -53,11 +53,12 @@ public class ChessGame {
 
                 System.out.println("*");
                 //init();
-                view=null;
+                //view=null;
                 controller = new GameController();
                 board = controller.playChess();
-                view = new GameView(controller);
+                view.controller=controller;
                 view.init(board);
+                view.reStart=false;
                 continue;
             }
 
@@ -75,8 +76,9 @@ public class ChessGame {
                 view=null;
                 controller = new GameController();
                 board = controller.playChess();
-                view = new GameView(controller);
+                view.controller=controller;
                 view.init(board);
+                view.reStart=false;
             }
         }
         view.showWinner('b');
