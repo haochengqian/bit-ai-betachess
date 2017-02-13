@@ -55,8 +55,16 @@ public class GameView {
     }
 
     public void init(final Board board) {
+
         this.board = board;
-        if (isRestart==false) {
+        selectedPieceKey = null;
+        prePieceFrameKey = null;
+        pieceFrameKey = null;
+        isPlayingMusic = false;
+        isTrainingAI = false;
+        SetAi = 0;
+
+        if (isRestart == false) {
             frame = new JFrame("Beta Chess");
             frame.setIconImage(new ImageIcon("res/img/icon.png").getImage());
             frame.setSize(VIEW_WIDTH + 240, VIEW_HEIGHT + 22);
@@ -65,6 +73,7 @@ public class GameView {
             pane = new JLayeredPane();
             frame.add(pane);
         }
+        pane.removeAll();
 
         /* Initialize chess board and listeners on each slot.*/
         JLabel bgBoard = new JLabel(new ImageIcon("res/img/board.png"));
@@ -283,25 +292,9 @@ public class GameView {
     class ButtonClickListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
             if (isTrainingAI == false) {
-                r=new Runnable1();
-                t=new Thread(r);
+                r = new Runnable1();
+                t = new Thread(r);
                 t.start();
-                /*new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        EvolutionaryProgramming evolutionaryProgramming = null;
-                        try {
-                            evolutionaryProgramming = new EvolutionaryProgramming(50, 20);
-                        } catch (InterruptedException e1) {
-                            e1.printStackTrace();
-                        }
-                        try {
-                            evolutionaryProgramming.evolove();
-                        } catch (InterruptedException e1) {
-                            e1.printStackTrace();
-                        }
-                    }
-                }).start();*/
                 lblTrainButton.setText("停止训练");
             } else {
                 t.interrupt();
