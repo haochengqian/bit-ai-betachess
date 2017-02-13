@@ -12,6 +12,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +39,7 @@ public class GameView {
     private JLabel lblPlayer;
     public JScrollPane jsp;
     public JTextArea consoleLabel;
-
+    private ConsoleToTextArea consoleToTextArea=null;
     private JButton lblTrainButton;
     private JButton lblInputANNButton;
     private JButton lblMusicButton;
@@ -92,11 +94,19 @@ public class GameView {
         nameLabel.addMouseListener(new BoardClickListener());
         pane.add(nameLabel, 1);
 
-        consoleLabel = new JTextArea();
-        consoleLabel.setLineWrap(true);
-        consoleLabel.setWrapStyleWord(true);
+        try{
+            consoleToTextArea = new ConsoleToTextArea();
+        } catch (IOException e) {
+            System.err.println("创建ConsoleToTextArea出错");
+        }
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+            }
+        });
 
-        jsp = new JScrollPane(consoleLabel);
+        jsp = new JScrollPane(consoleToTextArea);
         jsp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jsp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS );
         jsp.setSize(240, 300);
@@ -364,6 +374,18 @@ public class GameView {
         public void actionPerformed(ActionEvent e) {
             isRestart = true;
         }
+    }
+    public static void startWriterTestThread(final String name, final PrintStream ps, final int dalay, final int count,String s) {
+        new Thread(new Runnable(){
+            public void run() {
+                    ps.println(s);
+                    try {
+                        Thread.sleep(dalay);
+                    } catch (InterruptedException e) {
+                        // TODO: handle exception
+                    }
+            }
+        }).start();
     }
 
 }
