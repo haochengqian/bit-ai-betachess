@@ -116,7 +116,7 @@ public class GameView {
 
         jsp = new JScrollPane(consoleToTextArea);
         jsp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        //jsp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS );
+        jsp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER );
         jsp.setSize(215, 315);
         jsp.setLocation(710, 230);
         jsp.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -129,7 +129,7 @@ public class GameView {
         pane.add(lblPlayer, 0);
 
         /*选择output作为输入*/
-        lblInputANNButton = new JButton("加载ANN");
+        lblInputANNButton = new JButton("难度升级");
         lblInputANNButton.setLocation(710, 100);
         lblInputANNButton.setSize(90, PIECE_HEIGHT - 20);
         lblInputANNButton.addActionListener(new InputANNClickListener());
@@ -357,8 +357,18 @@ public class GameView {
     }
     class InputANNClickListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            SetAi = 1;
-            lblInputANNButton.setText("加载完成");
+            if(SetAi == 0) {
+                SetAi = 1;
+                lblInputANNButton.setText("中等");
+            }
+            else if(SetAi == 1){
+                SetAi = 2;
+                lblInputANNButton.setText("较难");
+            }
+            else{
+                SetAi = 0;
+                lblInputANNButton.setText("简单");
+            }
         }
     }
 

@@ -31,6 +31,7 @@ public class ChessGame {
     }
 
     public void run() throws InterruptedException {
+        System.out.println("当前难度为简单\n点击难度升级按钮升级难度\n点击播放音乐开始播放音乐\n点击训练AI开始学习\n结果存在根目录annOut.txt文件\n点击重新开始重置棋盘\n点击棋子点击目标位置开始下棋");
         while (controller.hasWin(board) == 'x') {
             PostApi text = new PostApi();
             view.showPlayer('r');

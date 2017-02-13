@@ -85,8 +85,14 @@ public class GameController {
          * Implements artificial intelligence.
          * */
         ANN ann;
-        if(view.SetAi == 1){
-            ann = EvolutionaryProgramming.readFromFile();
+        if(view.SetAi == 0){
+            ann = EvolutionaryProgramming.readFromFile("outPutEasy.txt");
+        }
+        else if(view.SetAi == 1){
+            ann = EvolutionaryProgramming.readFromFile("outPutMiddle.txt");
+        }
+        else if(view.SetAi == 2){
+            ann = EvolutionaryProgramming.readFromFile("outPutHard.txt");
         }
         else ann = new ANN();
         SearchModel searchModel = new SearchModel();

@@ -76,13 +76,13 @@ public class EvolutionaryProgramming {
         }
     }
 
-    public static ANN readFromFile(){
+    public static ANN readFromFile(String ss){
         String resultw = null;
         String resultv = null;
         try {
             FileReader fileReader = null;
             BufferedReader bufferedReader = null;
-            String fileName = "annOut.txt";
+            String fileName = ss;
             fileReader = new FileReader(fileName);
             bufferedReader = new BufferedReader(fileReader);
             try {
