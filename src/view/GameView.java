@@ -25,6 +25,7 @@ public class GameView {
     private Board board;
     private Board trainBoard;
     private String selectedPieceKey;
+    private String prePieceFrameKey;
     private String pieceFrameKey;
     private JFrame frame;
     private JLayeredPane pane;
@@ -100,7 +101,23 @@ public class GameView {
     public void movePieceFromModel(String pieceKey, int[] to) {
         JLabel pieceObject = pieceObjects.get(pieceKey);
         JLabel pieceFrameObject = pieceObjects.get(pieceFrameKey);
+
+        int[] from = board.pieces.get(pieceKey).position;
+        int[] pPos = modelToViewConverter(from);
         int[] sPos = modelToViewConverter(to);
+
+        if (prePieceFrameKey == null) {
+            JLabel lblPrePieceFrame = new JLabel(new ImageIcon("res/img/selected.png"));
+            lblPrePieceFrame.setLocation(pPos[0], pPos[1]);
+            lblPrePieceFrame.setSize(PIECE_WIDTH, PIECE_HEIGHT);
+            prePieceFrameKey = "PreFrame";
+            pieceObjects.put(prePieceFrameKey, lblPrePieceFrame);
+            pane.add(lblPrePieceFrame, 0);
+        } else {
+            JLabel prePieceFrameObject = pieceObjects.get(prePieceFrameKey);
+            prePieceFrameObject.setLocation(pPos[0], pPos[1]);
+        }
+
         pieceObject.setLocation(sPos[0], sPos[1]);
         pieceFrameObject.setLocation(sPos[0], sPos[1]);
 
@@ -117,7 +134,23 @@ public class GameView {
 
         JLabel pieceObject = pieceObjects.get(pieceKey);
         JLabel pieceFrameObject = pieceObjects.get(pieceFrameKey);
+
+        int[] from = board.pieces.get(pieceKey).position;
+        int[] pPos = modelToViewConverter(from);
         int[] sPos = modelToViewConverter(to);
+
+        if (prePieceFrameKey == null) {
+            JLabel lblPrePieceFrame = new JLabel(new ImageIcon("res/img/selected.png"));
+            lblPrePieceFrame.setLocation(pPos[0], pPos[1]);
+            lblPrePieceFrame.setSize(PIECE_WIDTH, PIECE_HEIGHT);
+            prePieceFrameKey = "PreFrame";
+            pieceObjects.put(prePieceFrameKey, lblPrePieceFrame);
+            pane.add(lblPrePieceFrame, 0);
+        } else {
+            JLabel prePieceFrameObject = pieceObjects.get(prePieceFrameKey);
+            prePieceFrameObject.setLocation(pPos[0], pPos[1]);
+        }
+
         pieceObject.setLocation(sPos[0], sPos[1]);
         pieceFrameObject.setLocation(sPos[0], sPos[1]);
 
