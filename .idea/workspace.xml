@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac357e1e-2b0a-452a-883b-e1724c7cc6a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PieceOnClickListener.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/view/GameView$PieceOnClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BetaChess/view/GameView.class" afterPath="$PROJECT_DIR$/out/production/BetaChess/view/GameView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ChessGame.java" afterPath="$PROJECT_DIR$/src/ChessGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/GameView.java" afterPath="$PROJECT_DIR$/src/view/GameView.java" />
     </list>
     <ignored path="BetaChess.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +60,8 @@
       <file leaf-file-name="GameView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="327" column="43" lean-forward="true" selection-start-line="327" selection-start-column="43" selection-end-line="327" selection-end-column="43" />
+            <state relative-caret-position="178">
+              <caret line="212" column="9" lean-forward="true" selection-start-line="212" selection-start-column="9" selection-end-line="212" selection-end-column="9" />
               <folding>
                 <element signature="e#1432#1433#0" expanded="true" />
                 <element signature="e#1480#1481#0" expanded="true" />
@@ -119,8 +115,8 @@
       <file leaf-file-name="ChessGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            <state relative-caret-position="260">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1103,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="327" column="43" lean-forward="true" selection-start-line="327" selection-start-column="43" selection-end-line="327" selection-end-column="43" />
+        <state relative-caret-position="178">
+          <caret line="212" column="9" lean-forward="true" selection-start-line="212" selection-start-column="9" selection-end-line="212" selection-end-column="9" />
           <folding>
             <element signature="e#1432#1433#0" expanded="true" />
             <element signature="e#1480#1481#0" expanded="true" />
@@ -1116,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        <state relative-caret-position="260">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

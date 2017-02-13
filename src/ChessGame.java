@@ -36,23 +36,31 @@ public class ChessGame {
             System.out.println(board.fetchFen());
             PostApi text = new PostApi();
             System.out.println(text.sendGet("http://api.chessdb.cn:81/chessdb.php?action=query&egtbmetric=dtc&egtbmetric=dtm&board=",board.fetchFen()));
-            if(view.reStart==true){
 
-                System.out.println("*");
-                //init();
-
-                controller = new GameController();
-                board = controller.playChess();
-                view = new GameView(controller);
-                view.init(board);
-            }
 
             view.showPlayer('r');
             /* User in. */
 //            controller.responseMoveChess(board, view);
 
-            while (board.player == 'r')
+            while (board.player == 'r'){
                 Thread.sleep(1000);
+                if(view.reStart==true){
+                    break;
+                }
+            }
+
+            if(view.reStart==true){
+
+                System.out.println("*");
+                //init();
+                view=null;
+                controller = new GameController();
+                board = controller.playChess();
+                view = new GameView(controller);
+                view.init(board);
+                continue;
+            }
+
 
             if (controller.hasWin(board) != 'x')
                 view.showWinner('r');
