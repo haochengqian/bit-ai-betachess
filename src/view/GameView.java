@@ -48,6 +48,8 @@ public class GameView {
     public boolean isRestart = false;
     public boolean isTrainingAI = false;
 
+    private Runnable1 r;
+    private Thread t;
     public GameView(GameController gameController) {
         this.controller = gameController;
     }
@@ -281,7 +283,10 @@ public class GameView {
     class ButtonClickListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
             if (isTrainingAI == false) {
-                new Thread(new Runnable() {
+                r=new Runnable1();
+                t=new Thread(r);
+                t.start();
+                /*new Thread(new Runnable() {
                     @Override
                     public void run() {
                         EvolutionaryProgramming evolutionaryProgramming = null;
@@ -296,9 +301,10 @@ public class GameView {
                             e1.printStackTrace();
                         }
                     }
-                }).start();
+                }).start();*/
                 lblTrainButton.setText("停止训练");
             } else {
+                t.interrupt();
                 lblTrainButton.setText("训练AI");
             }
             isTrainingAI = !isTrainingAI;
@@ -314,10 +320,8 @@ public class GameView {
     class PlayMusicClickListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (isPlayingMusic == false) {
-                Runnable1 r=new Runnable1();
-                Thread t=new Thread(r);
-                t.start();
-                /*new Thread(new Runnable() {
+
+                new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try {
@@ -332,7 +336,7 @@ public class GameView {
                             System.out.println(e);
                         }
                     }
-                }).start();*/
+                }).start();
                 lblMusicButton.setText("停止播放");
             } else {
                 player.close();

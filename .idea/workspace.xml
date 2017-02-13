@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac357e1e-2b0a-452a-883b-e1724c7cc6a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/GameView.java" afterPath="$PROJECT_DIR$/src/view/GameView.java" />
     </list>
     <ignored path="BetaChess.iws" />
@@ -65,10 +64,10 @@
       <file leaf-file-name="GameView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-82">
-              <caret line="318" column="26" lean-forward="false" selection-start-line="318" selection-start-column="26" selection-end-line="318" selection-end-column="26" />
+            <state relative-caret-position="151">
+              <caret line="352" column="0" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
               <folding>
-                <marker date="1486989470605" expanded="true" signature="13335:13353" ph="{...}" />
+                <marker date="1486989918614" expanded="true" signature="13397:13415" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -125,7 +124,7 @@
       <file leaf-file-name="ChessGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
+            <state relative-caret-position="488">
               <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -205,8 +204,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="298" />
-    <option name="y" value="7" />
+    <option name="x" value="-34" />
+    <option name="y" value="26" />
     <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
@@ -283,10 +282,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameView.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -619,7 +614,7 @@
     <option name="totallyTimeSpent" value="29568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="298" y="7" width="1378" height="744" extended-state="0" />
+    <frame x="-34" y="26" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -716,7 +711,7 @@
         <state relative-caret-position="0">
           <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
           <folding>
-            <marker date="1486989470605" expanded="true" signature="13335:13353" ph="{...}" />
+            <marker date="1486989918614" expanded="true" signature="13397:13415" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -789,7 +784,7 @@
         <state relative-caret-position="0">
           <caret line="220" column="68" lean-forward="false" selection-start-line="220" selection-start-column="68" selection-end-line="220" selection-end-column="68" />
           <folding>
-            <marker date="1486989470605" expanded="true" signature="13335:13353" ph="{...}" />
+            <marker date="1486989918614" expanded="true" signature="13397:13415" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1036,16 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithm/PostApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
@@ -1080,12 +1065,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChessGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="318" column="26" lean-forward="false" selection-start-line="318" selection-start-column="26" selection-end-line="318" selection-end-column="26" />
+        <state relative-caret-position="151">
+          <caret line="352" column="0" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
           <folding>
-            <marker date="1486989470605" expanded="true" signature="13335:13353" ph="{...}" />
+            <marker date="1486989918614" expanded="true" signature="13397:13415" ph="{...}" />
           </folding>
         </state>
       </provider>
