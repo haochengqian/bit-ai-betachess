@@ -60,7 +60,6 @@ public class ChessGame {
             controller.responseMoveChess(board, view);
 
             if(view.isRestart == true){
-                view=null;
                 controller = new GameController();
                 board = controller.playChess();
                 view.controller = controller;

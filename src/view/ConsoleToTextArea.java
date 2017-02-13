@@ -57,7 +57,6 @@ public class ConsoleToTextArea extends JTextArea{
                         }
                     } catch (IOException e) {
                         JOptionPane.showMessageDialog(null, "从bufferedReader中读取错误："+e.getMessage());
-                        System.exit(1);
                     }
                 }
             }).start();

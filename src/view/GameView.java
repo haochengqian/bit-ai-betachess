@@ -19,9 +19,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Tong on 12.10.
+ * Created by Tong on 1.10.
  * Dealing with graphics logic in the chess game. Render with j2d.
  */
+
 public class GameView {
     private static final int VIEW_WIDTH = 700, VIEW_HEIGHT = 712;
     private static final int PIECE_WIDTH = 67, PIECE_HEIGHT = 67;
@@ -53,8 +54,6 @@ public class GameView {
     public boolean isRestart = false;
     public boolean isTrainingAI = false;
 
-    private Runnable1 r;
-    private Thread t;
     public GameView(GameController gameController) {
         this.controller = gameController;
     }
@@ -87,12 +86,21 @@ public class GameView {
         bgBoard.addMouseListener(new BoardClickListener());
         pane.add(bgBoard, 1);
 
-        JLabel nameLabel = new JLabel("beta chess", 0);
+        JLabel bgBoardExtend = new JLabel(new ImageIcon("res/img/boardExtend.png"));
+        bgBoardExtend.setLocation(VIEW_WIDTH, 0);
+        bgBoardExtend.setSize(240, VIEW_HEIGHT);
+        pane.add(bgBoardExtend, 1);
+
+        JLabel nameLabel = new JLabel(new ImageIcon("res/img/BetaChess.png"));
         nameLabel.setLocation(VIEW_WIDTH, 10);
-        nameLabel.setBorder(BorderFactory.createLineBorder(Color.black));
+        //nameLabel.setBorder(BorderFactory.createLineBorder(Color.black));
         nameLabel.setSize(240, 80);
-        nameLabel.addMouseListener(new BoardClickListener());
         pane.add(nameLabel, 1);
+
+        JLabel infoLabel = new JLabel(new ImageIcon("res/img/info.png"));
+        infoLabel.setLocation(VIEW_WIDTH, 550);
+        infoLabel.setSize(240, 120);
+        pane.add(infoLabel, 1);
 
         try{
             consoleToTextArea = new ConsoleToTextArea();
@@ -108,9 +116,9 @@ public class GameView {
 
         jsp = new JScrollPane(consoleToTextArea);
         jsp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        jsp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS );
-        jsp.setSize(240, 300);
-        jsp.setLocation(VIEW_WIDTH, 230);
+        //jsp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS );
+        jsp.setSize(215, 315);
+        jsp.setLocation(710, 230);
         jsp.setBorder(BorderFactory.createLineBorder(Color.black));
         pane.add(jsp,"Center");
 
@@ -324,12 +332,24 @@ public class GameView {
     class ButtonClickListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
             if (isTrainingAI == false) {
-                r = new Runnable1();
-                t = new Thread(r);
-                t.start();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        EvolutionaryProgramming evolutionaryProgramming = null;
+                        try {
+                            evolutionaryProgramming = new EvolutionaryProgramming(50, 20);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        try {
+                            evolutionaryProgramming.evolove();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
                 lblTrainButton.setText("停止训练");
             } else {
-                t.interrupt();
                 lblTrainButton.setText("训练AI");
             }
             isTrainingAI = !isTrainingAI;
@@ -345,7 +365,6 @@ public class GameView {
     class PlayMusicClickListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (isPlayingMusic == false) {
-
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -370,11 +389,13 @@ public class GameView {
             isPlayingMusic = !isPlayingMusic;
         }
     }
+
     class RestartClickListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             isRestart = true;
         }
     }
+
     public static void startWriterTestThread(final String name, final PrintStream ps, final int dalay, final int count,String s) {
         new Thread(new Runnable(){
             public void run() {
@@ -388,20 +409,4 @@ public class GameView {
         }).start();
     }
 
-}
-
-class Runnable1 implements Runnable{
-    public void run(){
-        EvolutionaryProgramming evolutionaryProgramming = null;
-        try {
-            evolutionaryProgramming = new EvolutionaryProgramming(50, 20);
-        } catch (InterruptedException e1) {
-            e1.printStackTrace();
-        }
-        try {
-            evolutionaryProgramming.evolove();
-        } catch (InterruptedException e1) {
-            e1.printStackTrace();
-        }
-    }
 }
