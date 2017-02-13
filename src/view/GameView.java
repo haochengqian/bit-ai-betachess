@@ -314,7 +314,10 @@ public class GameView {
     class PlayMusicClickListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (isPlayingMusic == false) {
-                new Thread(new Runnable() {
+                Runnable1 r=new Runnable1();
+                Thread t=new Thread(r);
+                t.start();
+                /*new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try {
@@ -329,7 +332,7 @@ public class GameView {
                             System.out.println(e);
                         }
                     }
-                }).start();
+                }).start();*/
                 lblMusicButton.setText("停止播放");
             } else {
                 player.close();
@@ -344,4 +347,20 @@ public class GameView {
         }
     }
 
+}
+
+class Runnable1 implements Runnable{
+    public void run(){
+        EvolutionaryProgramming evolutionaryProgramming = null;
+        try {
+            evolutionaryProgramming = new EvolutionaryProgramming(50, 20);
+        } catch (InterruptedException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            evolutionaryProgramming.evolove();
+        } catch (InterruptedException e1) {
+            e1.printStackTrace();
+        }
+    }
 }
