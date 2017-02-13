@@ -24,8 +24,8 @@ public class RobotTrain {
         System.out.println("Robot starts to train");
         GameController robotGameController = new GameController();
         Board trainBoard = robotGameController.playChess();
-        trainBoard.changeAIorCut();
         SearchModel seachModel;
+        trainBoard.changeAIorCut();
         AlphaBetaNode result;
         char winner = 'x';
 
@@ -67,6 +67,7 @@ public class RobotTrain {
             times = 500;
         }
         System.out.println(winner);
+        trainBoard.changeAIorCut();
         return times;
     }
 }

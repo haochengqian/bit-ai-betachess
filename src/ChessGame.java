@@ -14,7 +14,7 @@ import javazoom.jl.player.Player;
 public class ChessGame {
     private Board board;
     private GameController controller;
-    static private GameView view;
+    static public GameView view;
 
     public static void main(String[] args) throws InterruptedException {
         ChessGame game = new ChessGame();

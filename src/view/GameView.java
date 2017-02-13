@@ -35,6 +35,8 @@ public class GameView {
     private JLayeredPane pane;
     public GameController controller;
     private JLabel lblPlayer;
+    public JScrollPane jsp;
+    public JTextArea consoleLabel;
 
     private JButton lblTrainButton;
     private JButton lblInputANNButton;
@@ -90,12 +92,17 @@ public class GameView {
         nameLabel.addMouseListener(new BoardClickListener());
         pane.add(nameLabel, 1);
 
-        JLabel consoleLabel = new JLabel("beta chess", 0);
-        consoleLabel.setLocation(VIEW_WIDTH, 230);
-        consoleLabel.setBorder(BorderFactory.createLineBorder(Color.black));
-        consoleLabel.setSize(240, 300);
-        consoleLabel.addMouseListener(new BoardClickListener());
-        pane.add(consoleLabel, 1);
+        consoleLabel = new JTextArea();
+        consoleLabel.setLineWrap(true);
+        consoleLabel.setWrapStyleWord(true);
+
+        jsp = new JScrollPane(consoleLabel);
+        jsp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jsp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS );
+        jsp.setSize(240, 300);
+        jsp.setLocation(VIEW_WIDTH, 230);
+        jsp.setBorder(BorderFactory.createLineBorder(Color.black));
+        pane.add(jsp,"Center");
 
         /* Initialize player image.*/
         lblPlayer = new JLabel(new ImageIcon("res/img/r.png"));
