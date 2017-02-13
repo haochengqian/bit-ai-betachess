@@ -15,6 +15,7 @@ public class Board{
     public Map changeFEN;
     public char player = 'r';
     private Piece[][] cells = new Piece[BOARD_HEIGHT][BOARD_WIDTH];
+    public int AiorCut = 0;
     public Board(Board b){
         this.pieces=b.pieces;
         this.player=b.player;
@@ -100,6 +101,10 @@ public class Board{
 
     public Piece getPiece(int[] pos) {
         return getPiece(pos[0], pos[1]);
+    }
+
+    public void changeAIorCut(){
+        AiorCut = (AiorCut + 1) % 2;
     }
 
     public Piece getPiece(int x, int y) {

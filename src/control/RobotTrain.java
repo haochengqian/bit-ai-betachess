@@ -24,6 +24,7 @@ public class RobotTrain {
         System.out.println("Robot starts to train");
         GameController robotGameController = new GameController();
         Board trainBoard = robotGameController.playChess();
+        trainBoard.changeAIorCut();
         SearchModel seachModel;
         AlphaBetaNode result;
         char winner = 'x';

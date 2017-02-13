@@ -27,7 +27,7 @@ public class EvalModel {
 
 
     public int eval(Board board, char player, ANN ann) {
-        if(player == 'r') {
+        if(player == 'r'||board.AiorCut == 0) {
             for (Map.Entry<String, Piece> stringPieceEntry : board.pieces.entrySet()) {
                 Piece piece = stringPieceEntry.getValue();
             /* The table in PiecePosition is for red player in default. To eval black player, needs to perform a mirror transformation. */
@@ -62,47 +62,47 @@ public class EvalModel {
                     case 'm':
                         if (piece.color == 'r') {
                             values[0][3] += evalPieceValue(3);
-                            values[0][4] += evalPiecePosition(-3, piece.position);
+                            values[0][4] += evalPiecePosition(board.AiorCut == 1? -3 : 3, piece.position);
                             values[0][11]+=evalPieceFlexible(3)*moves_number;
                         } else {
                             values[1][3] += evalPieceValue(3);
-                            values[1][4] += evalPiecePosition(-3, reversePosition);
+                            values[1][4] += evalPiecePosition(board.AiorCut == 1? -3 : 3, reversePosition);
                             values[1][11]+=evalPieceFlexible(3)*moves_number;
                         }
                         break;
                     case 'j':
                         if (piece.color == 'r') {
                             values[0][5] += evalPieceValue(4);
-                            values[0][6] += evalPiecePosition(-4, piece.position);
+                            values[0][6] += evalPiecePosition(board.AiorCut == 1? -4 : 4, piece.position);
                             values[0][11]+=evalPieceFlexible(4);
 
                         } else {
                             values[1][5] += evalPieceValue(4);
-                            values[1][6] += evalPiecePosition(-4, reversePosition);
+                            values[1][6] += evalPiecePosition(board.AiorCut == 1? -4 : 4, reversePosition);
                             values[1][11]+=evalPieceFlexible(4);
                         }
                         break;
                     case 'p':
                         if (piece.color == 'r') {
                             values[0][7] += evalPieceValue(5);
-                            values[0][8] += evalPiecePosition(-5, piece.position);
+                            values[0][8] += evalPiecePosition(board.AiorCut == 1? -5 : 5, piece.position);
                             values[0][11]+=evalPieceFlexible(5);
 
                         } else {
                             values[1][7] += evalPieceValue(5);
-                            values[1][8] += evalPiecePosition(-5, reversePosition);
+                            values[1][8] += evalPiecePosition(board.AiorCut == 1? -5 : 5, reversePosition);
                             values[1][11]+=evalPieceFlexible(5);
                         }
                         break;
                     case 'z':
                         if (piece.color == 'r') {
                             values[0][9] += evalPieceValue(6);
-                            values[0][10] += evalPiecePosition(-6, piece.position);
+                            values[0][10] += evalPiecePosition(board.AiorCut == 1? -6 : 6, piece.position);
                             values[0][11]+=evalPieceFlexible(6);
 
                         } else {
                             values[1][9] += evalPieceValue(6);
-                            values[1][10] += evalPiecePosition(-6, reversePosition);
+                            values[1][10] += evalPiecePosition(board.AiorCut == 1? -6 : 6, reversePosition);
                             values[1][11]+=evalPieceFlexible(6);
 
                         }
