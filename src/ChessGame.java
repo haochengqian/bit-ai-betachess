@@ -32,33 +32,23 @@ public class ChessGame {
 
     public void run() throws InterruptedException {
         while (controller.hasWin(board) == 'x') {
-
-            System.out.println(board.fetchFen());
             PostApi text = new PostApi();
-            System.out.println(text.sendGet("http://api.chessdb.cn:81/chessdb.php?action=query&egtbmetric=dtc&egtbmetric=dtm&board=",board.fetchFen()));
-
-
             view.showPlayer('r');
-            /* User in. */
-//            controller.responseMoveChess(board, view);
 
+            /* User in. */
             while (board.player == 'r'){
                 Thread.sleep(1000);
-                if(view.reStart==true){
+                if(view.isRestart==true){
                     break;
                 }
             }
 
-            if(view.reStart==true){
-
-                System.out.println("*");
-                //init();
-                //view=null;
+            if(view.isRestart == true){
                 controller = new GameController();
                 board = controller.playChess();
                 view.controller=controller;
                 view.init(board);
-                view.reStart=false;
+                view.isRestart=false;
                 continue;
             }
 
@@ -69,16 +59,13 @@ public class ChessGame {
             /* AI in. */
             controller.responseMoveChess(board, view);
 
-            if(view.reStart==true){
-
-                System.out.println("*");
-                //init();
+            if(view.isRestart == true){
                 view=null;
                 controller = new GameController();
                 board = controller.playChess();
-                view.controller=controller;
+                view.controller = controller;
                 view.init(board);
-                view.reStart=false;
+                view.isRestart = false;
             }
         }
         view.showWinner('b');
