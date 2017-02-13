@@ -8,6 +8,7 @@ import control.GameController;
 import javazoom.jl.player.Player;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -82,6 +83,20 @@ public class GameView {
         bgBoard.addMouseListener(new BoardClickListener());
         pane.add(bgBoard, 1);
 
+        JLabel nameLabel = new JLabel("beta chess", 0);
+        nameLabel.setLocation(VIEW_WIDTH, 10);
+        nameLabel.setBorder(BorderFactory.createLineBorder(Color.black));
+        nameLabel.setSize(240, 80);
+        nameLabel.addMouseListener(new BoardClickListener());
+        pane.add(nameLabel, 1);
+
+        JLabel consoleLabel = new JLabel("beta chess", 0);
+        consoleLabel.setLocation(VIEW_WIDTH, 230);
+        consoleLabel.setBorder(BorderFactory.createLineBorder(Color.black));
+        consoleLabel.setSize(240, 300);
+        consoleLabel.addMouseListener(new BoardClickListener());
+        pane.add(consoleLabel, 1);
+
         /* Initialize player image.*/
         lblPlayer = new JLabel(new ImageIcon("res/img/r.png"));
         lblPlayer.setLocation(10, 320);
@@ -90,21 +105,21 @@ public class GameView {
 
         /*选择output作为输入*/
         lblInputANNButton = new JButton("加载ANN");
-        lblInputANNButton.setLocation(710, 50);
+        lblInputANNButton.setLocation(710, 100);
         lblInputANNButton.setSize(90, PIECE_HEIGHT - 20);
         lblInputANNButton.addActionListener(new InputANNClickListener());
         pane.add(lblInputANNButton, 0);
 
         //*************训练ai按钮
         lblTrainButton = new JButton("训练AI");
-        lblTrainButton.setLocation(820, 50);
+        lblTrainButton.setLocation(820, 100);
         lblTrainButton.setSize(90, PIECE_HEIGHT - 20);
         lblTrainButton.addActionListener(new ButtonClickListener());
         pane.add(lblTrainButton, 0);
 
         /*播放音乐*/
         lblMusicButton = new JButton("播放音乐");
-        lblMusicButton.setLocation(710, 120);
+        lblMusicButton.setLocation(710, 170);
         lblMusicButton.setSize(90, PIECE_HEIGHT - 20);
         lblMusicButton.addActionListener(new PlayMusicClickListener());
         pane.add(lblMusicButton, 0);
@@ -112,7 +127,7 @@ public class GameView {
 
         //重新开始
         lblRestartButton = new JButton("重新开始");
-        lblRestartButton.setLocation(820, 120);
+        lblRestartButton.setLocation(820, 170);
         lblRestartButton.setSize(90, PIECE_HEIGHT - 20);
         lblRestartButton.addActionListener(new RestartClickListener());
         pane.add(lblRestartButton, 0);
