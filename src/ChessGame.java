@@ -14,7 +14,7 @@ import javazoom.jl.player.Player;
 public class ChessGame {
     private Board board;
     private GameController controller;
-    private GameView view;
+    static private GameView view;
 
     public static void main(String[] args) throws InterruptedException {
         ChessGame game = new ChessGame();
@@ -36,7 +36,16 @@ public class ChessGame {
             System.out.println(board.fetchFen());
             PostApi text = new PostApi();
             System.out.println(text.sendGet("http://api.chessdb.cn:81/chessdb.php?action=query&egtbmetric=dtc&egtbmetric=dtm&board=",board.fetchFen()));
+            if(view.reStart==true){
 
+                System.out.println("*");
+                //init();
+
+                controller = new GameController();
+                board = controller.playChess();
+                view = new GameView(controller);
+                view.init(board);
+            }
 
             view.showPlayer('r');
             /* User in. */
@@ -50,6 +59,17 @@ public class ChessGame {
             view.showPlayer('b');
             /* AI in. */
             controller.responseMoveChess(board, view);
+
+            if(view.reStart==true){
+
+                System.out.println("*");
+                //init();
+                view=null;
+                controller = new GameController();
+                board = controller.playChess();
+                view = new GameView(controller);
+                view.init(board);
+            }
         }
         view.showWinner('b');
     }

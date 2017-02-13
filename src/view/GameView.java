@@ -21,7 +21,7 @@ import java.util.Map;
  */
 public class GameView {
     private static final int VIEW_WIDTH = 700, VIEW_HEIGHT = 712;
-    private static final int PIECE_WIDTH = 67, PIECE_HEIGHT = 67;
+    private static final int PIECE_WIDTH = 90, PIECE_HEIGHT = 67;
     private static final int SY_COE = 68, SX_COE = 68;
     private static final int SX_OFFSET = 50, SY_OFFSET = 15;
     private Map<String, JLabel> pieceObjects = new HashMap<String, JLabel>();
@@ -30,7 +30,7 @@ public class GameView {
     private String selectedPieceKey;
     private String prePieceFrameKey;
     private String pieceFrameKey;
-    private JFrame frame;
+    public JFrame frame;
     private JLayeredPane pane;
     private GameController controller;
     private JLabel lblPlayer;
@@ -40,6 +40,7 @@ public class GameView {
     private String musicName = "高山流水-女子十二乐坊.mp3";
     public int SetAi = 0;
     public boolean isPlayingMusic = false;
+    public boolean reStart=false;
 
     public GameView(GameController gameController) {
         this.controller = gameController;
@@ -47,49 +48,60 @@ public class GameView {
 
     public void init(final Board board) {
         this.board = board;
-        frame = new JFrame("Beta Chess");
-        frame.setIconImage(new ImageIcon("res/img/icon.png").getImage());
-        frame.setSize(VIEW_WIDTH + 180, VIEW_HEIGHT + 22);
-        frame.setLocationRelativeTo(null);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        pane = new JLayeredPane();
-        frame.add(pane);
+        if (true) {
+
+
+            frame = new JFrame("Beta Chess");
+            frame.setIconImage(new ImageIcon("res/img/icon.png").getImage());
+            frame.setSize(VIEW_WIDTH + 240, VIEW_HEIGHT + 22);
+            frame.setLocationRelativeTo(null);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            pane = new JLayeredPane();
+            frame.add(pane);
+        }
 
         /* Initialize chess board and listeners on each slot.*/
-        JLabel bgBoard = new JLabel(new ImageIcon("res/img/board.png"));
-        bgBoard.setLocation(0, 0);
-        bgBoard.setSize(VIEW_WIDTH, VIEW_HEIGHT);
-        bgBoard.addMouseListener(new BoardClickListener());
-        pane.add(bgBoard, 1);
+            JLabel bgBoard = new JLabel(new ImageIcon("res/img/board.png"));
+            bgBoard.setLocation(0, 0);
+            bgBoard.setSize(VIEW_WIDTH, VIEW_HEIGHT);
+            bgBoard.addMouseListener(new BoardClickListener());
+            pane.add(bgBoard, 1);
 
         /* Initialize player image.*/
-        lblPlayer = new JLabel(new ImageIcon("res/img/r.png"));
-        lblPlayer.setLocation(10, 320);
-        lblPlayer.setSize(PIECE_WIDTH, PIECE_HEIGHT);
-        pane.add(lblPlayer, 0);
+            lblPlayer = new JLabel(new ImageIcon("res/img/r.png"));
+            lblPlayer.setLocation(10, 320);
+            lblPlayer.setSize(PIECE_WIDTH, PIECE_HEIGHT);
+            pane.add(lblPlayer, 0);
 
         /*选择output作为输入*/
-        lblPutAnn = new JButton("加载ANN");
-        lblPutAnn.setLocation(710, 50);
-        lblPutAnn.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
-        lblPutAnn.addActionListener(new PutAiClickListen());
-        pane.add(lblPutAnn,0);
+            lblPutAnn = new JButton("加载ANN");
+            lblPutAnn.setLocation(710, 50);
+            lblPutAnn.setSize(PIECE_WIDTH, PIECE_HEIGHT - 20);
+            lblPutAnn.addActionListener(new PutAiClickListen());
+            pane.add(lblPutAnn, 0);
 
-        //*************训练ai按钮
-        lblButton = new JButton("训练AI");
-        lblButton.setLocation(800, 50);
-        lblButton.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
-        lblButton.addActionListener(new ButtonClickListener());
-        pane.add(lblButton,0);
+            //*************训练ai按钮
+            lblButton = new JButton("训练AI");
+            lblButton.setLocation(820, 50);
+            lblButton.setSize(PIECE_WIDTH, PIECE_HEIGHT - 20);
+            lblButton.addActionListener(new ButtonClickListener());
+            pane.add(lblButton, 0);
 
         /*播放音乐*/
-        lblPutAnn = new JButton("播放音乐");
-        lblPutAnn.setLocation(710, 120);
-        lblPutAnn.setSize(PIECE_WIDTH,PIECE_HEIGHT - 20);
-        lblPutAnn.addActionListener(new PlayMusicClickListener());
-        pane.add(lblPutAnn,0);
-        //*************end
+            lblPutAnn = new JButton("播放音乐");
+            lblPutAnn.setLocation(710, 120);
+            lblPutAnn.setSize(PIECE_WIDTH, PIECE_HEIGHT - 20);
+            lblPutAnn.addActionListener(new PlayMusicClickListener());
+            pane.add(lblPutAnn, 0);
+            //*************end
 
+            //重新开始
+            lblPutAnn = new JButton("重新开始");
+            lblPutAnn.setLocation(820, 120);
+            lblPutAnn.setSize(PIECE_WIDTH, PIECE_HEIGHT - 20);
+            lblPutAnn.addActionListener(new restartClinkListener());
+            pane.add(lblPutAnn, 0);
+            /////////////**end
 
         /* Initialize chess pieces and listeners on each piece.*/
         Map<String, Piece> pieces = board.pieces;
@@ -293,8 +305,10 @@ public class GameView {
                             BufferedInputStream buffer = new BufferedInputStream(
                                     new FileInputStream(musicName));
                             player = new Player(buffer);
-                            while(true)
-                            player.play();
+                            while(true){
+                                player.play();
+                            }
+
                         } catch (Exception e) {
                             System.out.println(e);
                         }
@@ -304,6 +318,16 @@ public class GameView {
                 player.close();
             }
             isPlayingMusic = !isPlayingMusic;
+        }
+    }
+    class restartClinkListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            reStart = true;
+            System.out.println(reStart);
+            /*controller= new GameController() ;
+            board = controller.playChess();
+            init(board);*/
+            //reStart=false;
         }
     }
 
